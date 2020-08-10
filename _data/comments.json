@@ -1,0 +1,50 @@
+[
+  {
+    "_id": "5f23fa7fe9b49492a43cfbde",
+    "user": "5f23ea9a7a18f78fcbd3914d",
+    "post": "5f23e70b0930128f02cd82d0",
+    "author": "user1",
+    "body": "that's awsome. I can't wait!",
+    "likes": 12
+  },
+  {
+    "_id": "5f23fab1e9b49492a43cfbdf",
+    "user": "5f23ea71bd7c768fb0c1af05",
+    "post": "5f23e70b0930128f02cd82d0",
+    "author": "user2",
+    "body": "that's great!",
+    "likes": 23
+  },
+  {
+    "_id": "5f23fb15e9b49492a43cfbe0",
+    "user": "5f23ea71bd7c768fb0c1af05",
+    "post": "5f23e7150930128f02cd82d1",
+    "author": "user2",
+    "body": "that's sad",
+    "likes": 15
+  },
+  {
+    "_id": "5f23fb2fe9b49492a43cfbe1",
+    "user": "5f23ea9a7a18f78fcbd3914d",
+    "post": "5f23e7150930128f02cd82d1",
+    "author": "user1",
+    "body": "he's amazing",
+    "likes": 32
+  },
+  {
+    "_id": "5f23fb4de9b49492a43cfbe2",
+    "user": "5f23ea9a7a18f78fcbd3914d",
+    "post": "5f23e71d0930128f02cd82d2",
+    "author": "user3",
+    "body": "she's terrible",
+    "likes": 11
+  },
+  {
+    "_id": "5f23e7510930128f02cd82d3",
+    "user": "5f23ea9a7a18f78fcbd3914d",
+    "post": "5f23e70b0930128f02cd82d0",
+    "author": "user3",
+    "body": "she's bad",
+    "likes": 21
+  }
+]

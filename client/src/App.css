@@ -1,0 +1,555 @@
+* {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+body {
+  margin: 0;
+  font-family: 'Nanum Gothic', sans-serif;
+  font-size: 0.8rem;
+  padding-right: 270px;
+  padding-left: 270px;
+}
+ul {
+  list-style: none;
+  padding-inline-start: 0;
+}
+.navbar-row {
+  display: grid;
+  height: 60px;
+  grid-template-columns: 200px 940px;
+  align-items: center;
+  justify-content: end;
+}
+
+.navbar-row .logo {
+  display: grid;
+  margin: 0;
+  justify-content: start;
+  align-content: center;
+}
+.navbar-row .logo a {
+  font-size: 1.5rem;
+}
+.navbar-row .logo a:hover {
+  color: black;
+  font-size: 1.6rem;
+}
+.navbar-row .links {
+  display: grid;
+  justify-content: end;
+  justify-items: center;
+  align-content: center;
+  grid-template-columns: 130px 130px 130px;
+}
+.navbar-row .links p {
+  color: black;
+  padding: 0.45rem;
+  margin: 0 0.25rem;
+  font-size: 1rem;
+  justify-content: center;
+}
+.navbar-row .links p:hover {
+  color: black;
+  font-size: 1.1rem;
+}
+#dropdown {
+  display: grid;
+  opacity: 0.7;
+  padding-top: 10px;
+  grid-template-columns: 130px 130px 130px;
+  grid-template-rows: 30px 30px 30px;
+  justify-content: end;
+  justify-items: center;
+  position: absolute;
+  background-color: black;
+  width: 1140px;
+  height: 200px;
+  top: 60px;
+  left: 270px;
+}
+#dropdown a {
+  color: white;
+}
+.mainbox1 {
+  display: grid;
+
+  grid-template-columns: 4fr;
+  grid-template-rows: 25px 1fr;
+  align-content: start;
+  justify-content: start;
+}
+.mainbox2 {
+  margin-top: 650px;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 2fr 5fr;
+}
+.mainbox2 .linkbox {
+  display: grid;
+  padding-right: 1rem;
+  padding-bottom: 0.5rem;
+  align-content: center;
+  grid-template-rows: 100px 60px 60px;
+  grid-gap: 3px;
+}
+.mainbox2 .linkbox .linkbox-tel {
+  border-bottom: 0.05rem gray solid;
+}
+.mainbox2 .linkbox .linkbox1 {
+  display: grid;
+  grid-template-rows: 30px 20px;
+  align-items: center;
+  border-bottom: 0.05rem gray solid;
+}
+.mainbox2 .linkbox .linkbox1:hover {
+  background-color: #f6f6f6;
+}
+.mainbox2 .linkbox .linkbox2 {
+  display: grid;
+  grid-template-rows: 30px 20px;
+  border-bottom: 0.05rem gray solid;
+  align-items: center;
+}
+.mainbox2 .linkbox .linkbox2:hover {
+  background-color: #f6f6f6;
+}
+.mainbox2 .linkbox .linkbox3 {
+  border-bottom: 0.05rem gray solid;
+}
+.mainbox2 .gallery .title {
+  display: grid;
+  grid-auto-flow: column;
+}
+.mainbox2 .gallery .title .title-title {
+  font-size: 1.2rem;
+}
+.mainbox2 .gallery .title .more {
+  align-self: end;
+  justify-self: end;
+}
+.mainbox2 .gallery .title .more:hover {
+  font-size: 1rem;
+}
+.mainbox2 .gallery .products {
+  display: grid;
+  justify-self: start;
+  padding: 0;
+}
+.mainbox2 .gallery .products ul {
+  display: grid;
+  justify-self: center;
+  grid-auto-flow: column;
+  grid-gap: 20px;
+  padding-inline-start: 0;
+}
+.mainbox2 .gallery .products ul li:hover {
+  opacity: 0.5;
+}
+.mainbox3 {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  margin-top: 1rem;
+}
+.mainbox3 .notice {
+  display: grid;
+  grid-template-rows: 30px 1fr;
+  grid-gap: 10px;
+}
+.mainbox3 .notice .notice-title {
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  font-size: 1.2rem;
+  align-items: end;
+}
+.mainbox3 .notice .notice-title .notice-title-more {
+  justify-self: end;
+  font-size: 0.8rem;
+}
+.mainbox3 .notice ul {
+  display: grid;
+  align-items: start;
+  grid-template-rows: 40px 40px 40px 40px 40px;
+  border-top: 0.05rem gray solid;
+}
+.mainbox3 .notice ul li {
+  display: grid;
+  grid-template-columns: 1fr;
+  border-bottom: 0.05rem gray solid;
+  align-items: center;
+  justify-items: center;
+}
+.mainbox3 .notice ul li a:hover {
+  color: gray;
+}
+.mainbox3 .way {
+  display: grid;
+  grid-gap: 3rem;
+  grid-template-columns: 306px 1fr;
+  margin-left: 2rem;
+}
+.mainbox3 .way .way-img {
+  justify-self: center;
+}
+
+.mainbox3 .way .way-desc {
+  display: grid;
+  grid-template-rows: 130px 130px;
+}
+.mainbox3 .way .way-desc .way-description {
+  border-bottom: 0.05rem gray solid;
+}
+
+.mainbox3 .way .way-desc .way-description:hover {
+  background-color: #f6f6f6;
+}
+
+.footer {
+  bottom: 0px;
+  width: 1140px;
+  background-color: #f6f6f6;
+  margin-top: 2rem;
+  color: #878787;
+  display: grid;
+  grid-template-columns: 150px 1fr;
+}
+.footer .footer-logo {
+  align-self: center;
+  justify-self: center;
+}
+.footer .footer-desc {
+  display: grid;
+  grid-auto-flow: row;
+}
+.postmainbox {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  margin-top: 200px;
+}
+.postmainbox .navbar-column {
+  display: grid;
+
+  grid-template-rows: 50px 1fr;
+  justify-items: center;
+}
+.postmainbox .navbar-column ul {
+  display: grid;
+  grid-template-rows: 20px 20px 20px;
+  justify-items: center;
+}
+.postmainbox .navbar-column ul a:hover {
+  color: gray;
+}
+.postmainbox .postshowbox {
+  display: grid;
+  grid-template-rows: 80px 50px 435px 100px;
+}
+.postmainbox .postshowbox .postshowbox-head {
+  display: grid;
+  grid-auto-flow: column;
+}
+.postmainbox .postshowbox .postshowbox-head a {
+  font-size: 1.5rem;
+}
+.postmainbox .postshowbox .postshowbox-head .write {
+  justify-self: end;
+  align-self: end;
+}
+.postmainbox .postshowbox .postshowbox-head .write:hover {
+  color: gray;
+}
+.postmainbox .postshowbox .bar {
+  display: grid;
+  grid-template-columns: 450px 180px 192px;
+  justify-items: center;
+  border-bottom: 0.05rem gray solid;
+  font-size: 1rem;
+}
+.postmainbox .postshowbox .posts {
+  display: grid;
+  grid-template-rows: 20px;
+  border-bottom: 0.05rem gray solid;
+}
+.postmainbox .postshowbox .posts ul li a {
+  display: grid;
+  grid-template-columns: 450px 180px 192px;
+  justify-items: center;
+}
+.postmainbox .postshowbox .posts ul li a:hover {
+  background-color: #f6f6f6;
+}
+.postmainbox .postshowbox .pagination {
+  margin-top: 10px;
+  display: grid;
+  height: 20px;
+  grid-template-columns: 1fr 30px 1fr;
+  justify-self: center;
+}
+.postmainbox .postshowbox .pagination-notice {
+  margin-top: 10px;
+  display: grid;
+  height: 100%;
+  grid-template-columns: 100px 30px 100px;
+  justify-self: center;
+  align-content: center;
+}
+.postmainbox .postshowbox .pagination-notice .pagination-page {
+  display: grid;
+}
+.postmainbox .draftbox {
+  display: grid;
+  grid-template-rows: 80px 800px;
+  background-color: grey;
+}
+.postmainbox .draftbox .draftbox-head {
+  justify-items: start;
+}
+.postmainbox .draftbox .draftbox-main form {
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 8fr 3fr 1fr;
+  justify-items: start;
+  align-items: center;
+}
+
+.postmainbox .draftbox .draftbox-main form .submit-button {
+  justify-self: end;
+}
+
+.postmainbox .draftbox .draftbox-main form .agreementbox {
+  display: grid;
+  grid-template-rows: auto;
+}
+
+.postmainbox .draftbox .draftbox-main form .agreementbox .checkbox {
+  display: grid;
+  grid-template-columns: auto;
+  justify-self: end;
+  width: 30px;
+}
+
+.postmainbox .draftbox .draftbox-main input {
+  width: 150px;
+  height: 25px;
+}
+.postmainbox .draftbox .draftbox-main .longinput {
+  width: 100%;
+  height: 90%;
+}
+.postmainbox .draftbox .draftbox-agreement {
+  display: grid;
+  grid-auto-flow: row;
+}
+
+.gallerymainbox {
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  margin-top: 200px;
+}
+.gallerymainbox .navbar-column {
+  display: grid;
+  grid-template-rows: 50px 1fr;
+  justify-items: center;
+}
+.gallerymainbox .navbar-column ul {
+  display: grid;
+  grid-template-rows: 20px 20px 20px;
+  justify-items: center;
+}
+.gallerymainbox .navbar-column ul a:hover {
+  color: gray;
+}
+.gallerymainbox .photobox {
+  display: grid;
+  grid-auto-flow: row;
+}
+.gallerymainbox .photobox .photoboxmain {
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-gap: 3rem;
+}
+.gallerymainbox .photobox .photoboxmain .productbox {
+  display: grid;
+}
+
+.gallerymainbox .photobox .photoboxmain .productbox:hover {
+  color: gray;
+}
+.gallerymainbox .gallerypostbox {
+  display: grid;
+  grid-auto-flow: row;
+}
+.postcontentmainbox {
+  display: grid;
+  grid-template-columns: 1fr 6fr;
+  grid-gap: 1rem;
+  padding: 1rem;
+  margin-top: 200px;
+}
+.postcontentmainbox .navbar-column {
+  display: grid;
+
+  grid-template-rows: 50px 1fr;
+  justify-items: center;
+}
+.postcontentmainbox .navbar-column ul {
+  display: grid;
+  grid-template-rows: 20px 20px 20px;
+  justify-items: center;
+}
+.postcontentmainbox .navbar-column ul a:hover {
+  color: gray;
+}
+.postcontentmainbox .contentbox {
+  display: grid;
+  border-left: 0.02rem gray solid;
+  grid-auto-flow: row;
+  margin-top: 1rem;
+  grid-template-columns: 1fr 5fr;
+  border-left: 0.02rem gray solid;
+  border-top: 0.02rem gray solid;
+}
+.postcontentmainbox .contentbox p {
+  margin: 0;
+
+  border-right: 0.02rem gray solid;
+  border-bottom: 0.02rem gray solid;
+}
+
+.postcontentmainbox .contentbox .idx {
+  display: grid;
+  background-color: #f6f6f6;
+}
+
+.postcontentmainbox .introbox {
+  display: grid;
+  grid-auto-flow: row;
+  justify-items: center;
+  margin-left: 1rem;
+}
+
+#noticebacklink {
+  display: grid;
+  justify-items: end;
+}
+
+.postcontentmainbox .contentbox .contentboxmain {
+  display: grid;
+  grid-auto-flow: row;
+  min-height: 200px;
+}
+.postcontentmainbox .contentbox a:hover {
+  color: gray;
+}
+
+.mapmainbox {
+  display: grid;
+  grid-template-columns: 4fr 3fr;
+  grid-template-rows: 400px;
+}
+.mapimg {
+  justify-self: center;
+}
+.draftbox {
+  margin-top: 250px;
+  display: grid;
+  justify-items: center;
+  margin-bottom: 100px;
+}
+.draftbox form {
+  justify-content: center;
+  width: 50%;
+  display: grid;
+  grid-gap: 5px;
+  grid-template-rows: 45px 30px 30px 30px 30px 250px 150px 10px 30px;
+}
+.draftbox form .h2box {
+  justify-self: center;
+  border-bottom: 0.02rem gray solid;
+}
+
+.agreementcheckbox {
+  display: grid;
+  grid-template-columns: 70px 30px;
+  justify-content: end;
+}
+
+.mapmainbox {
+  margin-bottom: 220px;
+  padding: 20px;
+}
+
+.introbox {
+  margin-bottom: 20px;
+}
+
+.galleryPost {
+  margin-top: 180px;
+  background-color: gray;
+  height: 1000px;
+  width: 1140px;
+}
+
+.imgshow {
+  width: 1140px;
+}
+
+.background {
+  margin-top: 0px;
+  padding: 10px;
+}
+.fas {
+  padding-left: 20px;
+  padding-top: 20px;
+  color: black;
+  position: absolute;
+  font-size: 5rem;
+}
+.manage-notice {
+  display: grid;
+  width: 70%;
+  grid-template-rows: 30px 30px 300px;
+}
+.manage-notice2 {
+  display: grid;
+  width: 70%;
+  grid-template-rows: 30px 30px;
+}
+
+.manage-photo {
+  display: grid;
+  width: 70%;
+  grid-template-rows: 30px 30px;
+}
+
+.manage3-box {
+  width: 70%;
+  display: grid;
+  grid-template-columns: 1fr 5fr 1fr;
+  align-items: center;
+  justify-content: center;
+}
+.manage3-content {
+  border: grey 0.02rem solid;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: 1fr;
+  padding: 1rem;
+}
+.postpiece-main {
+  display: grid;
+  grid-template-columns: 250px 1fr;
+  align-items: center;
+  align-content: center;
+}
+
+.managebox {
+  margin-top: 200px;
+}
+
+.map-descbox {
+  padding-left: 20px;
+}
