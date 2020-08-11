@@ -42,14 +42,12 @@ class Manage3 extends Component {
   }
 
   componentDidMount() {
-    axios
-      .get('http://localhost:8080/api/v1/requests?page=1&limit=1')
-      .then((res) => {
-        if (res.data.data[0]) {
-          this.setState({ data: res.data.data[0] });
-        }
-      });
-    axios.get('http://localhost:8080/api/v1/requests').then((res) => {
+    axios.get('/api/v1/requests?page=1&limit=1').then((res) => {
+      if (res.data.data[0]) {
+        this.setState({ data: res.data.data[0] });
+      }
+    });
+    axios.get('/api/v1/requests').then((res) => {
       this.setState({ total: res.data.count });
     });
   }

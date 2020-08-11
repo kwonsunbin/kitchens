@@ -17,13 +17,13 @@ class Noticebox2 extends Component {
   }
   componentDidMount() {
     axios
-      .get('http://localhost:8080/api/v1/notices', {
+      .get('/api/v1/notices', {
         params: { page: 1, limit: 10 },
       })
       .then((response) => {
         this.setState({ data: response.data });
       });
-    axios.get('http://localhost:8080/api/v1/notices').then((response) => {
+    axios.get('/api/v1/notices').then((response) => {
       const totalpage = Math.ceil(response.data.count / 10);
       this.setState({ total: totalpage });
     });
