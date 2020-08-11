@@ -40,8 +40,8 @@ class Mainbox2 extends Component {
           <div className="linkbox-tel">
             <h3>전화 상담 및 문의</h3>
             <p>
-              <strong> 사번 </strong> : 053-951-2476 <br></br>{' '}
-              <strong>핸드폰</strong> : 010-2321-2551
+              <strong>키친스 매장</strong> : 053-777-7777<br></br>{' '}
+              <strong>휴대폰</strong> : 010-7777-7777
             </p>
           </div>
           <Link to="./draft" className="linkbox1">

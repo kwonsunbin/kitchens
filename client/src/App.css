@@ -415,7 +415,7 @@ ul {
 }
 .postcontentmainbox .contentbox p {
   margin: 0;
-
+  padding: 4px;
   border-right: 0.02rem gray solid;
   border-bottom: 0.02rem gray solid;
 }
@@ -428,10 +428,15 @@ ul {
 .postcontentmainbox .introbox {
   display: grid;
   grid-auto-flow: row;
-  justify-items: center;
   margin-left: 1rem;
 }
+.postcontentmainbox .introbox p {
+  line-height: 1.4rem;
+}
 
+.postcontentmainbox .introbox h2 {
+  justify-self: left;
+}
 #noticebacklink {
   display: grid;
   justify-items: end;

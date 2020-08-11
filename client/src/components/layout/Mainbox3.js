@@ -53,9 +53,9 @@ class Mainbox3 extends Component {
             <div className="phonenum">
               <h2>연락처 및 이메일</h2>
               <p>
-                사번 : 053-951-2476 <br></br> 핸드폰 : 010-2321-2551
+                키친스 매장 : 053-777-7777 <br></br> 휴대폰 : 010-7777-7777
               </p>
-              <p>이메일 : sunbin1696@gmail.com</p>
+              <p>이메일 : kmshihi@gmail.com</p>
             </div>
           </div>
         </div>
