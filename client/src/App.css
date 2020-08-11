@@ -295,6 +295,7 @@ ul {
   grid-template-columns: 100px 30px 100px;
   justify-self: center;
   align-content: center;
+  justify-content: center;
 }
 .postmainbox .postshowbox .pagination-notice .pagination-page {
   display: grid;

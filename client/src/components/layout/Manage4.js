@@ -2,6 +2,7 @@ import React, { Component, Fragment } from 'react';
 import axios from 'axios';
 import { confirmAlert } from 'react-confirm-alert'; // Import
 import 'react-confirm-alert/src/react-confirm-alert.css';
+import swal from 'sweetalert';
 
 class Manage4 extends Component {
   constructor(props) {
@@ -33,14 +34,14 @@ class Manage4 extends Component {
               )
               .then((res) => {
                 if (res.status === 200) {
-                  alert('삭제되었습니다');
+                  swal('삭제되었습니다');
                 }
               })
               .catch(function (error) {
                 if (error.response) {
-                  alert('공지 id를 확인해주세요');
+                  swal('공지 id를 확인해주세요');
                 } else {
-                  alert('에러!');
+                  swal('에러!');
                 }
               });
 

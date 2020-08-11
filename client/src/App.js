@@ -14,6 +14,7 @@ import Gallerypost from './components/Gallerypost';
 import Bulletinpost from './components/Bulletinpost';
 import Noticepost from './components/Noticepost';
 import Manage from './components/Manange';
+import Notfound from './components/Notfound';
 
 const App = () => (
   <Router>
@@ -31,6 +32,7 @@ const App = () => (
         <Route exact path="/noticepost/:id" component={Noticepost} />
         <Route exact path="/gallerypost/:id" component={Gallerypost} />
         <Route exact path="/manage" component={Manage} />
+        <Route component={Notfound} />
       </Switch>
       <Footer />
     </Fragment>

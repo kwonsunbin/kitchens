@@ -16,7 +16,6 @@ class Mainbox2 extends Component {
       url: 'http://localhost:8080/api/v1/photos/getfs',
     }).then((res) => {
       this.setState({ files: res.data.data });
-      console.log(this.state);
     });
   }
 

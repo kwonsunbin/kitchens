@@ -26,7 +26,6 @@ class Noticebox2 extends Component {
     axios.get('http://localhost:8080/api/v1/notices').then((response) => {
       const totalpage = Math.ceil(response.data.count / 10);
       this.setState({ total: totalpage });
-      console.log(this.state);
     });
   }
 
@@ -40,7 +39,6 @@ class Noticebox2 extends Component {
       .get(`http://localhost:8080/api/v1/notices?page=${page}&limit=10`)
       .then((res) => {
         this.setState({ data: res.data.data[0], page: page });
-        console.log(this.state);
       });
   }
   handleDecrease() {
@@ -83,23 +81,15 @@ class Noticebox2 extends Component {
           </div>
 
           <div className="pagination-notice">
-            <div>
-              <i
-                className="fas fa-angle-left-notice"
-                onClick={this.handleDecrease}
-              ></i>
-            </div>
+            <button onClick={this.handleDecrease}> 이전 페이지 </button>
+
             <div className="pagination-page">
               <p>
                 {this.state.page} / {this.state.total}
               </p>
             </div>
-            <div>
-              <i
-                className="fas fa-angle-right-notice"
-                onClick={this.handleIncrease}
-              ></i>
-            </div>
+
+            <button onClick={this.handleIncrease}> 다음 페이지 </button>
           </div>
         </div>
       </div>

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import swal from 'sweetalert';
 
 class Manage2 extends Component {
   constructor(props) {
@@ -21,7 +22,7 @@ class Manage2 extends Component {
     var formData = new FormData();
     formData.append('file', this.state.selectedFile);
     if (!this.state.selectedFile) {
-      alert('사진을 선택해주세요');
+      swal('사진을 선택해주세요');
       return;
     }
     axios({
@@ -30,16 +31,15 @@ class Manage2 extends Component {
       data: formData,
     })
       .then((res) => {
-        console.log(res);
         if (res.status === 200) {
-          alert('등록되었습니다!');
+          swal('등록되었습니다!');
         }
       })
       .catch(function (error) {
         if (error.response) {
-          alert('모든 항목을 채워주세요');
+          swal('모든 항목을 채워주세요');
         } else {
-          alert('에러!');
+          swal('에러!');
         }
       });
     this.refs.file.value = '';

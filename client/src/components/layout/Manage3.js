@@ -30,7 +30,6 @@ class Manage3 extends Component {
       .get(`http://localhost:8080/api/v1/requests?page=${page}&limit=1`)
       .then((res) => {
         this.setState({ data: res.data.data[0], page: page });
-        console.log(this.state);
       });
   }
   handleDecrease() {
