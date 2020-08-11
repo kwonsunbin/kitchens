@@ -27,7 +27,7 @@ class Manage2 extends Component {
     }
     axios({
       method: 'post',
-      url: 'http://localhost:8080/api/v1/photos/upload',
+      url: '/api/v1/photos/upload',
       data: formData,
     })
       .then((res) => {

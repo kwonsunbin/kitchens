@@ -35,11 +35,9 @@ class Noticebox2 extends Component {
       return;
     }
     page = page + 1;
-    axios
-      .get(`http://localhost:8080/api/v1/notices?page=${page}&limit=10`)
-      .then((res) => {
-        this.setState({ data: res.data.data[0], page: page });
-      });
+    axios.get(`/api/v1/notices?page=${page}&limit=10`).then((res) => {
+      this.setState({ data: res.data.data[0], page: page });
+    });
   }
   handleDecrease() {
     var page = this.state.page;
@@ -47,11 +45,9 @@ class Noticebox2 extends Component {
       return;
     }
     page = page - 1;
-    axios
-      .get(`http://localhost:8080/api/v1/notices?page=${page}&limit=10`)
-      .then((res) => {
-        this.setState({ data: res.data.data[0], page: page });
-      });
+    axios.get(`/api/v1/notices?page=${page}&limit=10`).then((res) => {
+      this.setState({ data: res.data.data[0], page: page });
+    });
   }
   render() {
     const list = this.state.data.data.map((piece) => {

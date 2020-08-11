@@ -13,7 +13,7 @@ class Mainbox2 extends Component {
   componentDidMount() {
     axios({
       method: 'get',
-      url: 'http://localhost:8080/api/v1/photos/getfs',
+      url: '/api/v1/photos/getfs',
     }).then((res) => {
       this.setState({ files: res.data.data });
     });

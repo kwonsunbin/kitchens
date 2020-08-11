@@ -15,7 +15,7 @@ class Manage extends Component {
   handleCreate(data) {
     axios({
       method: 'post',
-      url: 'http://localhost:8080/api/v1/notices',
+      url: '/api/v1/notices',
       data: data,
     })
       .then((res) => {

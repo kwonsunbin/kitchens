@@ -13,11 +13,9 @@ class Mainbox3 extends Component {
     this.state = { data: { data: [0, 1, 2, 3, 4] } };
   }
   componentDidMount() {
-    axios
-      .get('http://localhost:8080/api/v1/notices?page=1&limit=5')
-      .then((response) => {
-        this.setState({ data: response.data });
-      });
+    axios.get('/api/v1/notices?page=1&limit=5').then((response) => {
+      this.setState({ data: response.data });
+    });
   }
 
   render() {

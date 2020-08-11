@@ -24,7 +24,7 @@ class Noticepost extends Component {
 
   componentDidMount() {
     axios
-      .get(`http://localhost:8080/api/v1/notices/${this.props.match.params.id}`)
+      .get(`/api/v1/notices/${this.props.match.params.id}`)
       .then((response) => {
         this.setState({ content: response.data.data });
       });

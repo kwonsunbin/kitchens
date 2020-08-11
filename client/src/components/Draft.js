@@ -12,7 +12,7 @@ class Draft extends Component {
   handleCreate(data) {
     axios({
       method: 'post',
-      url: 'http://localhost:8080/api/v1/requests',
+      url: '/api/v1/requests',
       data: data,
     })
       .then((res) => {

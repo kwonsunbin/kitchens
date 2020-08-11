@@ -30,9 +30,7 @@ class Manage5 extends Component {
           label: '네',
           onClick: () => {
             axios
-              .delete(
-                `http://localhost:8080/api/v1/photos/${this.state.photoid}`
-              )
+              .delete(`/api/v1/photos/${this.state.photoid}`)
               .then((res) => {
                 if (res.status === 200) {
                   swal('삭제되었습니다');

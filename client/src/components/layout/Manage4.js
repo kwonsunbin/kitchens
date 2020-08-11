@@ -29,9 +29,7 @@ class Manage4 extends Component {
           label: '네',
           onClick: () => {
             axios
-              .delete(
-                `http://localhost:8080/api/v1/notices/${this.state.noticeid}`
-              )
+              .delete(`/api/v1/notices/${this.state.noticeid}`)
               .then((res) => {
                 if (res.status === 200) {
                   swal('삭제되었습니다');
