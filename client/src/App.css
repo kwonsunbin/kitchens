@@ -6,6 +6,29 @@ a {
   text-decoration: none;
   color: black;
 }
+
+.tblidx {
+  background-color: #f6f6f6;
+  border-bottom: black solid 0.02vw;
+  border-right: black solid 0.02vw;
+  padding: 0.2vw;
+}
+.tblc {
+  border-bottom: black solid 0.02vw;
+  border-right: black solid 0.02vw;
+  padding: 0.2vw;
+}
+
+.noticepbox {
+  border-top: black solid 0.02vw;
+  border-left: black solid 0.02vw;
+}
+.noticepostboxtop {
+  margin-top: 2vw;
+}
+.postpiecepiece {
+  line-height: 2.3vw;
+}
 body {
   margin: 0;
   font-family: 'Nanum Gothic', sans-serif;
@@ -147,7 +170,7 @@ ul {
 }
 
 .full {
-  min-height: 79vh;
+  min-height: 82.5vh;
 }
 
 .fullform {

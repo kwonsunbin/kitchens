@@ -8,11 +8,11 @@ class Postpiecemain extends Component {
       <Grid container item className="postpiecepiece" xs={12}>
         <Grid item xs={10} align="center">
           <Link to="./noticepost/:id" className="postpiece-main">
-            <p>{this.props.data.title}</p>
+            {this.props.data.title}
           </Link>
         </Grid>
         <Grid item xs={2} align="center">
-          <p>{this.props.data.timestamp}</p>
+          {this.props.data.timestamp}
         </Grid>
       </Grid>
     );

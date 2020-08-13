@@ -63,9 +63,7 @@ class Mainbox3 extends Component {
                 <Grid>
                   <h3>대구광역시 북구 침산남로 48 </h3>
                 </Grid>
-                <Grid>
-                  <p>지번 : 노원동 1가 9-15 (우) 41589</p>
-                </Grid>
+                <Grid>지번 : 노원동 1가 9-15 (우) 41589</Grid>
               </Link>
             </Grid>
 
@@ -74,11 +72,9 @@ class Mainbox3 extends Component {
                 <h2>연락처 및 이메일</h2>
               </Grid>
               <Grid item xs={12}>
-                <p>
-                  키친스 매장 : 053-766-7411 <br></br> 휴대폰 : 010-4016-8890
-                  <br></br>
-                  이메일 : kidhanssem@naver.com
-                </p>
+                키친스 매장 : 053-766-7411 <br></br> 휴대폰 : 010-4016-8890
+                <br></br>
+                이메일 : kidhanssem@naver.com
               </Grid>
             </Grid>
           </Grid>
