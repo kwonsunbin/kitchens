@@ -14,6 +14,8 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
+    "@material-ui/core": "^4.11.0",
+    "@material-ui/icons": "^4.9.1",
     "colors": "^1.4.0",
     "concurrently": "^5.2.0",
     "cors": "^2.8.5",
@@ -23,6 +25,7 @@
     "express-fileupload": "^1.1.10",
     "glob": "^7.1.6",
     "list-react-files": "^0.2.0",
+    "material-ui": "^0.20.2",
     "moment": "^2.27.0",
     "moment-timezone": "^0.5.31",
     "mongoose": "^5.9.26",

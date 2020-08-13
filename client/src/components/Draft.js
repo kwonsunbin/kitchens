@@ -1,6 +1,5 @@
 import React, { Fragment, Component } from 'react';
-import Draftbox1 from './layout/Draftbox1';
-import Draftbox2 from './layout/Draftbox2';
+import Draftbox from './layout/Draftbox';
 import axios from 'axios';
 
 class Draft extends Component {
@@ -32,9 +31,8 @@ class Draft extends Component {
   render() {
     return (
       <Fragment>
-        <Draftbox1 />
         <div className="background">
-          <Draftbox2 onCreate={this.handleCreate} />
+          <Draftbox onCreate={this.handleCreate} />
         </div>
       </Fragment>
     );

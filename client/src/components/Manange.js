@@ -1,9 +1,11 @@
-import React, { Component, Fragment } from 'react';
+import React, { Component } from 'react';
 import Manage1 from './layout/Manage1';
 import Manage2 from './layout/Manage2';
 import Manage3 from './layout/Manage3';
 import Manage4 from './layout/Manage4';
 import Manage5 from './layout/Manage5.js';
+import Grid from '@material-ui/core/Grid';
+
 import axios from 'axios';
 
 class Manage extends Component {
@@ -34,12 +36,7 @@ class Manage extends Component {
 
   render() {
     return (
-      <Fragment>
-        <div className="mainbox1">
-          <div className="mainphoto">
-            <img src="./bookcase2.jpg" alt="bookcase2" />
-          </div>
-        </div>
+      <Grid container>
         <div className="managebox">
           <h1>공지 작성</h1>
           <Manage1 onCreate={this.handleCreate} />
@@ -52,7 +49,7 @@ class Manage extends Component {
           <h1>상담 및 문의 확인</h1>
           <Manage3 />
         </div>
-      </Fragment>
+      </Grid>
     );
   }
 }

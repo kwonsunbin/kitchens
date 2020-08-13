@@ -1,6 +1,7 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import Dropdown from './Dropdown';
 import { Link } from 'react-router-dom';
+import Grid from '@material-ui/core/Grid';
 
 class Navbar extends Component {
   constructor(props) {
@@ -21,17 +22,35 @@ class Navbar extends Component {
 
   render() {
     return (
-      <nav className="navbar-row" onClick={this.handleClick}>
-        <div className="logo">
-          <Link to="../">Kitchens </Link>
-        </div>
-        <div className="links" id="fordropdown">
-          <p>회사 소개</p>
-          <p>꾸밈 사례</p>
-          <p>고객지원</p>
-        </div>
+      <Fragment>
+        <Grid container className="navbar-row" onClick={this.handleClick}>
+          <Grid item xs={3} className="logo">
+            <Link to="../">
+              <p className="navbarLogo">Kitchens</p>
+            </Link>
+          </Grid>
+          <Grid
+            container
+            item
+            xs={9}
+            direction="row"
+            justify="flex-end"
+            alignItems="center"
+            className="navbarp"
+          >
+            <Grid item xs={2} align="center">
+              <p>회사 소개</p>
+            </Grid>
+            <Grid item xs={2} align="center">
+              <p>꾸밈 사례</p>
+            </Grid>
+            <Grid item xs={2} align="center">
+              <p>고객지원</p>
+            </Grid>
+          </Grid>
+        </Grid>
         <Dropdown clicked={this.state.isClicked} />
-      </nav>
+      </Fragment>
     );
   }
 }

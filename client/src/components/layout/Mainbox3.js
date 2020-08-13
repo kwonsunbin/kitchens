@@ -4,8 +4,9 @@ import Postpiecemain from './Postpiecemain';
 import axios from 'axios';
 import uuid from 'react-uuid';
 import { RenderAfterNavermapsLoaded } from 'react-naver-maps';
+import Grid from '@material-ui/core/Grid';
 
-import Mapbox2naver from './Mapbox2naver';
+import Mapbox2naver from './Mapboxnaver';
 
 class Mainbox3 extends Component {
   constructor(props) {
@@ -24,18 +25,18 @@ class Mainbox3 extends Component {
     });
 
     return (
-      <div className="mainbox3">
-        <div className="notice">
+      <Grid container className="mainbox3">
+        <Grid container item xs={5} className="notice">
           <div className="notice-title">
             <Link to="./notice">공지사항</Link>
-            <Link to="./notice" className="notice-title-more">
+            <Link to="./notice" className="more">
               더보기
             </Link>
           </div>
 
           <ul>{list}</ul>
-        </div>
-        <div className="way">
+        </Grid>
+        <Grid container item xs={7} className="way">
           <RenderAfterNavermapsLoaded
             ncpClientId={'vw4iuq2zy5'} // 자신의 네이버 계정에서 발급받은 Client ID
             error={<p>Maps Load Error</p>}
@@ -58,8 +59,8 @@ class Mainbox3 extends Component {
               <p>이메일 : kmshihi@gmail.com</p>
             </div>
           </div>
-        </div>
-      </div>
+        </Grid>
+      </Grid>
     );
   }
 }

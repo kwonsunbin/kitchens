@@ -1,6 +1,5 @@
 import React, { Fragment, Component } from 'react';
-import Noticepostbox1 from './layout/Noticepostbox1';
-import Noticepostbox2 from './layout/Noticepostbox2';
+import Noticepostbox from './layout/Noticepostbox';
 import axios from 'axios';
 
 class Noticepost extends Component {
@@ -33,8 +32,7 @@ class Noticepost extends Component {
   render() {
     return (
       <Fragment>
-        <Noticepostbox1 />
-        <Noticepostbox2 content={this.state.content} />
+        <Noticepostbox content={this.state.content} />
       </Fragment>
     );
   }

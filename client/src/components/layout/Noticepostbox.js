@@ -1,19 +1,21 @@
 import React, { Component, Fragment } from 'react';
 import { Link } from 'react-router-dom';
+import Grid from '@material-ui/core/Grid';
 
-class Noticepostbox2 extends Component {
+class Noticepostbox extends Component {
   render() {
     return (
       <Fragment>
-        <div className="postcontentmainbox">
-          <div className="navbar-column">
+        <Grid container className="postcontentmainbox">
+          <Grid container item xs={2} className="navbar-column">
             <h2>고객지원</h2>
             <ul>
-              <Link to="./bulletin">공지사항</Link>
+              <Link to="./notice">공지사항</Link>
+              <Link to="./draft">상담 및 문의</Link>
             </ul>
-          </div>
+          </Grid>
 
-          <div className="contentbox">
+          <Grid container item xs={9} className="contentbox">
             <p className="idx">제목</p>
             <p>{this.props.content.title}</p>
             <p className="idx">작성자</p>
@@ -22,14 +24,16 @@ class Noticepostbox2 extends Component {
             <p>{this.props.content.timestamp}</p>
             <p className="idx">내용</p>
             <p>{this.props.content.content}</p>
-          </div>
-        </div>
-        <Link to="./notice" id="noticebacklink">
-          목록으로
-        </Link>
+          </Grid>
+          <Grid item xs={11}>
+            <Link to="./notice" id="noticebacklink">
+              목록으로
+            </Link>
+          </Grid>
+        </Grid>
       </Fragment>
     );
   }
 }
 
-export default Noticepostbox2;
+export default Noticepostbox;

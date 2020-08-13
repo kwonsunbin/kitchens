@@ -1,12 +1,10 @@
 import React, { Fragment } from 'react';
-import Introbox1 from './layout/Introbox1';
-import Introbox2 from './layout/Introbox2';
+import Introbox from './layout/Introbox';
 
 const intro = () => {
   return (
     <Fragment>
-      <Introbox1 />
-      <Introbox2 />
+      <Introbox />
     </Fragment>
   );
 };

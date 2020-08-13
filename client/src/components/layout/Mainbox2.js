@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import uuid from 'react-uuid';
 import axios from 'axios';
+import Grid from '@material-ui/core/Grid';
+
 class Mainbox2 extends Component {
   constructor(props) {
     super(props);
@@ -35,10 +37,10 @@ class Mainbox2 extends Component {
     });
 
     return (
-      <div className="mainbox2">
-        <div className="linkbox">
+      <Grid container className="mainbox2">
+        <Grid container item xs={4} className="linkbox">
           <div className="linkbox-tel">
-            <h3>전화 상담 및 문의</h3>
+            <h2>전화 상담 및 문의</h2>
             <p>
               <strong>키친스 매장</strong> : 053-777-7777<br></br>{' '}
               <strong>휴대폰</strong> : 010-7777-7777
@@ -52,17 +54,20 @@ class Mainbox2 extends Component {
             <h3>회사 소개</h3>
             <p>바로가기</p>
           </Link>
-        </div>
+        </Grid>
 
-        <div className="gallery">
-          <div className="title">
+        <Grid container item xs={8} className="gallery">
+          <Grid item xs={2}>
             <Link to="./gallery" className="title-title">
               꾸밈 사례
             </Link>
+          </Grid>
+          <Grid item xs={8}></Grid>
+          <Grid item xs={2} align="end">
             <Link to="./gallery" className="more">
               더보기
             </Link>
-          </div>
+          </Grid>
 
           <div className="products">
             <ul>
@@ -71,8 +76,8 @@ class Mainbox2 extends Component {
               <li>{parts[parts.length - 3]}</li>
             </ul>
           </div>
-        </div>
-      </div>
+        </Grid>
+      </Grid>
     );
   }
 }

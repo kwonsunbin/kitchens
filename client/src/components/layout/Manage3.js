@@ -1,5 +1,6 @@
-import React, { Component, Fragment } from 'react';
+import React, { Component } from 'react';
 import axios from 'axios';
+import Grid from '@material-ui/core/Grid';
 
 class Manage3 extends Component {
   constructor(props) {
@@ -54,34 +55,80 @@ class Manage3 extends Component {
 
   render() {
     return (
-      <Fragment>
-        <div className="manage3-box">
-          <div>
-            <i className="fas fa-angle-left" onClick={this.handleDecrease}></i>
-          </div>
-          <div className="manage3-content">
-            <p>제목</p>
-            <p>{this.state.data.title}</p>
-            <p>상담요청자</p>
-            <p>{this.state.data.authorName}</p>
-            <p>문의 내용</p>
-            <p>{this.state.data.content}</p>
-            <p>문의 날짜</p>
-            <p>{this.state.data.timestamp}</p>
-            <p>이메일</p>
-            <p>{this.state.data.email}</p>
-            <p>전화번호</p>
-            <p>{this.state.data.phone}</p>
-            <p>페이지</p>
-            <p>
-              {this.state.page} / {this.state.total}
-            </p>
-          </div>
-          <div>
-            <i className="fas fa-angle-right" onClick={this.handleIncrease}></i>
-          </div>
-        </div>
-      </Fragment>
+      <Grid container className="manage3-content">
+        <Grid item xs={2}></Grid>
+        <Grid item xs={2}>
+          <p>제목</p>
+        </Grid>
+        <Grid item xs={6}>
+          <p>{this.state.data.title}</p>
+        </Grid>
+        <Grid item xs={2}></Grid>
+
+        <Grid item xs={2}></Grid>
+        <Grid item xs={2}>
+          <p>상담요청자</p>
+        </Grid>
+        <Grid item xs={6}>
+          <p>{this.state.data.authorName}</p>
+        </Grid>
+        <Grid item xs={2}></Grid>
+        <Grid item xs={2}></Grid>
+        <Grid item xs={2}>
+          <p>문의 내용</p>
+        </Grid>
+        <Grid item xs={6}>
+          <p>{this.state.data.content}</p>
+        </Grid>
+        <Grid item xs={2}></Grid>
+        <Grid item xs={2}></Grid>
+        <Grid item xs={2}>
+          <p>문의 날짜</p>
+        </Grid>
+        <Grid item xs={6}>
+          <p>{this.state.data.timestamp}</p>
+        </Grid>
+        <Grid item xs={2}></Grid>
+        <Grid item xs={2}></Grid>
+        <Grid item xs={2}>
+          <p>이메일</p>
+        </Grid>
+        <Grid item xs={6}>
+          <p>{this.state.data.email}</p>
+        </Grid>
+        <Grid item xs={2}></Grid>
+        <Grid item xs={2}></Grid>
+        <Grid item xs={2}>
+          <p>전화번호</p>
+        </Grid>
+        <Grid item xs={6}>
+          <p>{this.state.data.phone}</p>
+        </Grid>
+        <Grid item xs={2}></Grid>
+        <Grid item xs={2}></Grid>
+        <Grid item xs={2}>
+          <p>페이지</p>
+        </Grid>
+        <Grid item xs={6}>
+          <p>
+            {this.state.page} / {this.state.total}
+          </p>
+          <Grid item xs={2}></Grid>
+          <Grid item xs={2}></Grid>
+        </Grid>
+        <Grid item xs={5}></Grid>
+        <Grid item xs={1}>
+          <button className="decrease" onClick={this.handleDecrease}>
+            이전 페이지
+          </button>
+        </Grid>
+        <Grid item xs={1}>
+          <button className="increase" onClick={this.handleIncrease}>
+            다음 페이지
+          </button>
+        </Grid>
+        <Grid item xs={5}></Grid>
+      </Grid>
     );
   }
 }
