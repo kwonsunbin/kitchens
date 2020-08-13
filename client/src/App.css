@@ -147,7 +147,12 @@ ul {
 }
 
 .full {
-  min-height: 100vh;
+  min-height: 79vh;
+}
+
+.fullform {
+  width: 100%;
+  height: 100%;
 }
 .mainbox3 .way .way-desc .way-description:hover {
   background-color: #f6f6f6;
@@ -335,11 +340,8 @@ ul {
   color: gray;
 }
 .postcontentmainbox .contentbox {
-  display: grid;
   border-left: 0.02vw gray solid;
-  grid-auto-flow: row;
   margin-top: 1vw;
-  grid-template-columns: 1fr 5fr;
   border-left: 0.02vw gray solid;
   border-top: 0.02vw gray solid;
 }

@@ -16,14 +16,30 @@ class Noticepostbox extends Component {
           </Grid>
 
           <Grid container item xs={9} className="contentbox">
-            <p className="idx">제목</p>
-            <p>{this.props.content.title}</p>
-            <p className="idx">작성자</p>
-            <p>{this.props.content.authorName}</p>
-            <p className="idx">작성일시</p>
-            <p>{this.props.content.timestamp}</p>
-            <p className="idx">내용</p>
-            <p>{this.props.content.content}</p>
+            <Grid item xs={2}>
+              <p className="idx">제목</p>
+            </Grid>
+            <Grid item xs={10}>
+              <p>{this.props.content.title}</p>
+            </Grid>
+            <Grid item xs={2}>
+              <p className="idx">작성자</p>
+            </Grid>
+            <Grid item xs={10}>
+              <p>{this.props.content.authorName}</p>
+            </Grid>
+            <Grid item xs={2}>
+              <p className="idx">작성일시</p>
+            </Grid>
+            <Grid item xs={10}>
+              <p>{this.props.content.timestamp}</p>
+            </Grid>
+            <Grid item xs={2}>
+              <p className="idx">내용</p>
+            </Grid>
+            <Grid item xs={10}>
+              <p>{this.props.content.content}</p>
+            </Grid>
           </Grid>
           <Grid item xs={11}>
             <Link to="./notice" id="noticebacklink">

@@ -1,4 +1,4 @@
-import React, { Fragment, Component } from 'react';
+import React, { Component } from 'react';
 import Noticebox from './layout/Noticebox';
 
 class Notice extends Component {

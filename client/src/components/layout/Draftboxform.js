@@ -55,49 +55,63 @@ class Draftboxform extends Component {
 
   render() {
     return (
-      <Grid item xs={6}>
+      <Grid container item xs={6}>
         <form onSubmit={this.handleSubmit}>
-          <div className="h2box">
+          <Grid item className="h2box" xs={12}>
             <h2>상담 및 문의</h2>
-          </div>
+          </Grid>
 
-          <input
-            placeholder="이름"
-            value={this.state.authorName}
-            onChange={this.handleChange}
-            id="authorName"
-          />
+          <Grid item xs={12}>
+            <input
+              className="fullform"
+              placeholder="이름"
+              value={this.state.authorName}
+              onChange={this.handleChange}
+              id="authorName"
+            />
+          </Grid>
 
-          <input
-            placeholder="휴대폰 번호"
-            value={this.state.phone}
-            onChange={this.handleChange}
-            id="phone"
-          />
+          <Grid item xs={12}>
+            <input
+              className="fullform"
+              placeholder="휴대폰 번호"
+              value={this.state.phone}
+              onChange={this.handleChange}
+              id="phone"
+            />
+          </Grid>
 
-          <input
-            placeholder="이메일"
-            value={this.state.email}
-            onChange={this.handleChange}
-            id="email"
-          />
+          <Grid item xs={12}>
+            <input
+              className="fullform"
+              placeholder="이메일"
+              value={this.state.email}
+              onChange={this.handleChange}
+              id="email"
+            />
+          </Grid>
 
-          <input
-            placeholder="제목"
-            value={this.state.title}
-            onChange={this.handleChange}
-            id="title"
-          />
+          <Grid item xs={12}>
+            <input
+              className="fullform"
+              placeholder="제목"
+              value={this.state.title}
+              onChange={this.handleChange}
+              id="title"
+            />
+          </Grid>
 
-          <textarea
-            placeholder="문의내용"
-            value={this.state.content}
-            onChange={this.handleChange}
-            id="content"
-            className="longinput"
-          />
+          <Grid item xs={12}>
+            <textarea
+              className="fullform"
+              placeholder="문의내용"
+              value={this.state.content}
+              onChange={this.handleChange}
+              id="content"
+            />
+          </Grid>
 
-          <div className="agreementbox">
+          <Grid item xs={12}>
             <p>
               키친스는 고객의 개인정보를 아래와 같은 목적으로 수집·이용합니다.
               회사는 고객으로 부터 제공 받은 개인정보를 아래의 목적 이외로는
@@ -109,21 +123,20 @@ class Draftboxform extends Component {
               개인정보를 원칙적으로 개인정보의 수집 및 이용목적이 달성되면
               지체없이 파기됩니다.
             </p>
-          </div>
-          <div>
-            <div className="agreementcheckbox">
-              <label htmlFor="agreement">동의합니다</label>
-              <input
-                type="checkbox"
-                id="agreement"
-                className="checkbox"
-                onChange={this.handleChange}
-              />
-            </div>
-          </div>
-          <button className="submit-button" type="submit">
-            작성하기
-          </button>
+          </Grid>
+
+          <Grid container item xs={12} justify="flex-end">
+            동의합니다
+          </Grid>
+          <Grid container item xs={12} justify="flex-end">
+            <input type="checkbox" onChange={this.handleChange} />
+          </Grid>
+
+          <Grid item xs={12} className="fullform">
+            <button className="fullform" type="submit">
+              작성하기
+            </button>
+          </Grid>
         </form>
       </Grid>
     );
