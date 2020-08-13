@@ -70,10 +70,10 @@ class Mainbox3 extends Component {
             </Grid>
 
             <Grid container item xs={12} className="phonenum">
-              <Grid xs={12}>
+              <Grid>
                 <h2>연락처 및 이메일</h2>
               </Grid>
-              <Grid xs={12}>
+              <Grid item xs={12}>
                 <p>
                   키친스 매장 : 053-777-7777 <br></br> 휴대폰 : 010-7777-7777
                   <br></br>

@@ -60,30 +60,20 @@ ul {
   grid-template-columns: 2fr 5fr;
 }
 .mainbox2 .linkbox {
-  display: grid;
   padding-right: 1vw;
   padding-bottom: 0.5vw;
-  align-content: center;
-  grid-template-rows: 5fr 3fr 3fr;
-  grid-gap: 3px;
 }
 .mainbox2 .linkbox .linkbox-tel {
   border-bottom: 0.05vw gray solid;
 }
 .mainbox2 .linkbox .linkbox1 {
-  display: grid;
-  grid-template-rows: 30px 20px;
-  align-items: center;
   border-bottom: 0.05vw gray solid;
 }
 .mainbox2 .linkbox .linkbox1:hover {
   background-color: #f6f6f6;
 }
 .mainbox2 .linkbox .linkbox2 {
-  display: grid;
-  grid-template-rows: 30px 20px;
   border-bottom: 0.05vw gray solid;
-  align-items: center;
 }
 .mainbox2 .linkbox .linkbox2:hover {
   background-color: #f6f6f6;

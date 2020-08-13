@@ -39,21 +39,38 @@ class Mainbox2 extends Component {
     return (
       <Grid container className="mainbox2">
         <Grid container item xs={4} className="linkbox">
-          <div className="linkbox-tel">
-            <h2>전화 상담 및 문의</h2>
-            <p>
-              <strong>키친스 매장</strong> : 053-777-7777<br></br>{' '}
-              <strong>휴대폰</strong> : 010-7777-7777
-            </p>
-          </div>
-          <Link to="./draft" className="linkbox1">
-            <h3>온라인 상담 및 문의</h3>
-            <p>바로가기</p>
-          </Link>
-          <Link to="./intro" className="linkbox2">
-            <h3>회사 소개</h3>
-            <p>바로가기</p>
-          </Link>
+          <Grid container item xs={12} className="linkbox-tel">
+            <Grid item xs={12}>
+              <h2>전화 상담 및 문의</h2>
+            </Grid>
+            <Grid item xs={12}>
+              <p>
+                <strong>키친스 매장</strong> : 053-777-7777<br></br>{' '}
+                <strong>휴대폰</strong> : 010-7777-7777
+              </p>
+            </Grid>
+          </Grid>
+
+          <Grid container item xs={12} className="linkbox1">
+            <Link to="./draft">
+              <Grid>
+                <h3>온라인 상담 및 문의</h3>
+              </Grid>
+              <Grid>
+                <p>바로가기</p>
+              </Grid>
+            </Link>
+          </Grid>
+          <Grid container item xs={12} className="linkbox2">
+            <Link to="./intro">
+              <Grid>
+                <h3>회사 소개</h3>
+              </Grid>
+              <Grid>
+                <p>바로가기</p>
+              </Grid>
+            </Link>
+          </Grid>
         </Grid>
 
         <Grid container item xs={8} className="gallery">
