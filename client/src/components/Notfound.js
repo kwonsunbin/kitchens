@@ -2,9 +2,9 @@ import React, { Fragment } from 'react';
 
 const Map = () => {
   return (
-    <Fragment>
+    <div className="full">
       <h1>Not Found</h1>
-    </Fragment>
+    </div>
   );
 };
 

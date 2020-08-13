@@ -3,9 +3,9 @@ import Mapbox from './layout/Mapbox';
 
 const Map = () => {
   return (
-    <Fragment>
+    <div className="full">
       <Mapbox />
-    </Fragment>
+    </div>
   );
 };
 

@@ -30,11 +30,13 @@ class Draft extends Component {
 
   render() {
     return (
-      <Fragment>
-        <div className="background">
-          <Draftbox onCreate={this.handleCreate} />
-        </div>
-      </Fragment>
+      <div className="full">
+        <Fragment>
+          <div className="background">
+            <Draftbox onCreate={this.handleCreate} />
+          </div>
+        </Fragment>
+      </div>
     );
   }
 }

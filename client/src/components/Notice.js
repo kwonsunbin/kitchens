@@ -4,9 +4,9 @@ import Noticebox from './layout/Noticebox';
 class Notice extends Component {
   render() {
     return (
-      <Fragment>
+      <div className="full">
         <Noticebox />
-      </Fragment>
+      </div>
     );
   }
 }

@@ -31,9 +31,9 @@ class Noticepost extends Component {
 
   render() {
     return (
-      <Fragment>
+      <div className="full">
         <Noticepostbox content={this.state.content} />
-      </Fragment>
+      </div>
     );
   }
 }

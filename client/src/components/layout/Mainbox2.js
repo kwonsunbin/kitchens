@@ -45,8 +45,8 @@ class Mainbox2 extends Component {
             </Grid>
             <Grid item xs={12}>
               <p>
-                <strong>키친스 매장</strong> : 053-777-7777<br></br>{' '}
-                <strong>휴대폰</strong> : 010-7777-7777
+                <strong>키친스 매장</strong> : 053-766-0411<br></br>{' '}
+                <strong>휴대폰</strong> : 010-4016-8890
               </p>
             </Grid>
           </Grid>
@@ -74,10 +74,12 @@ class Mainbox2 extends Component {
         </Grid>
 
         <Grid container item xs={8} className="gallery">
-          <Grid item xs={2}>
-            <Link to="./gallery" className="title-title">
-              꾸밈 사례
-            </Link>
+          <Grid container item justify="flex-start" alignItems="center" xs={2}>
+            <Grid>
+              <Link to="./gallery" className="title-title">
+                꾸밈 사례
+              </Link>
+            </Grid>
           </Grid>
           <Grid item xs={8}></Grid>
           <Grid item xs={2} align="end">

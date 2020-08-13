@@ -6,11 +6,11 @@ import Mainbox3 from './layout/Mainbox3';
 class Main extends Component {
   render() {
     return (
-      <Fragment>
+      <div className="full">
         <Mainbox1 />
         <Mainbox2 />
         <Mainbox3 />
-      </Fragment>
+      </div>
     );
   }
 }

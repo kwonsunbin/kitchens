@@ -36,20 +36,22 @@ class Manage extends Component {
 
   render() {
     return (
-      <Grid container className="pagebox">
-        <div className="managebox">
-          <h1>공지 작성</h1>
-          <Manage1 onCreate={this.handleCreate} />
-          <h1>공지 삭제</h1>
-          <Manage4 />
-          <h1>갤러리 사진 올리기</h1>
-          <Manage2 />
-          <h1>갤러리 사진 지우기</h1>
-          <Manage5 />
-          <h1>상담 및 문의 확인</h1>
-          <Manage3 />
-        </div>
-      </Grid>
+      <div className="full">
+        <Grid container className="pagebox">
+          <div className="managebox">
+            <h1>공지 작성</h1>
+            <Manage1 onCreate={this.handleCreate} />
+            <h1>공지 삭제</h1>
+            <Manage4 />
+            <h1>갤러리 사진 올리기</h1>
+            <Manage2 />
+            <h1>갤러리 사진 지우기</h1>
+            <Manage5 />
+            <h1>상담 및 문의 확인</h1>
+            <Manage3 />
+          </div>
+        </Grid>
+      </div>
     );
   }
 }

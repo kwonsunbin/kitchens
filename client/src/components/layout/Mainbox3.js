@@ -75,9 +75,9 @@ class Mainbox3 extends Component {
               </Grid>
               <Grid item xs={12}>
                 <p>
-                  키친스 매장 : 053-777-7777 <br></br> 휴대폰 : 010-7777-7777
+                  키친스 매장 : 053-766-7411 <br></br> 휴대폰 : 010-4016-8890
                   <br></br>
-                  이메일 : kmshihi@gmail.com
+                  이메일 : kidhanssem@naver.com
                 </p>
               </Grid>
             </Grid>

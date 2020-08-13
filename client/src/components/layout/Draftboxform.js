@@ -109,6 +109,8 @@ class Draftboxform extends Component {
               개인정보를 원칙적으로 개인정보의 수집 및 이용목적이 달성되면
               지체없이 파기됩니다.
             </p>
+          </div>
+          <div>
             <div className="agreementcheckbox">
               <label htmlFor="agreement">동의합니다</label>
               <input
@@ -119,7 +121,6 @@ class Draftboxform extends Component {
               />
             </div>
           </div>
-          <div></div>
           <button className="submit-button" type="submit">
             작성하기
           </button>

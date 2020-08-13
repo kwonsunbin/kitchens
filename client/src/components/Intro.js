@@ -3,9 +3,11 @@ import Introbox from './layout/Introbox';
 
 const intro = () => {
   return (
-    <Fragment>
-      <Introbox />
-    </Fragment>
+    <div className="full">
+      <Fragment>
+        <Introbox />
+      </Fragment>
+    </div>
   );
 };
 
