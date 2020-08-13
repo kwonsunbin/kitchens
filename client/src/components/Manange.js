@@ -36,7 +36,7 @@ class Manage extends Component {
 
   render() {
     return (
-      <Grid container>
+      <Grid container className="pagebox">
         <div className="managebox">
           <h1>공지 작성</h1>
           <Manage1 onCreate={this.handleCreate} />

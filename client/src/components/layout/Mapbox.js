@@ -7,7 +7,7 @@ import Grid from '@material-ui/core/Grid';
 class Mapbox2 extends Component {
   render() {
     return (
-      <Grid container>
+      <Grid container className="pagebox">
         <Grid
           container
           item

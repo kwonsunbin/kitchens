@@ -37,28 +37,43 @@ class Mainbox3 extends Component {
           <ul>{list}</ul>
         </Grid>
         <Grid container item xs={7} className="way">
-          <RenderAfterNavermapsLoaded
-            ncpClientId={'vw4iuq2zy5'} // 자신의 네이버 계정에서 발급받은 Client ID
-            error={<p>Maps Load Error</p>}
-            loading={<p>Maps Loading...</p>}
-          >
-            <Mapbox2naver />
-          </RenderAfterNavermapsLoaded>
-
-          <div className="way-desc">
-            <Link to="./map" className="way-description">
-              <h2>오시는 길</h2>
-              <h3>대구광역시 북구 침산남로 48 </h3>
-              <p>지번 : 노원동 1가 9-15 (우) 41589</p>
-            </Link>
-            <div className="phonenum">
-              <h2>연락처 및 이메일</h2>
-              <p>
-                키친스 매장 : 053-777-7777 <br></br> 휴대폰 : 010-7777-7777
-              </p>
-              <p>이메일 : kmshihi@gmail.com</p>
-            </div>
-          </div>
+          <Grid container item xs={12}>
+            <RenderAfterNavermapsLoaded
+              ncpClientId={'vw4iuq2zy5'} // 자신의 네이버 계정에서 발급받은 Client ID
+              error={<p>Maps Load Error</p>}
+              loading={<p>Maps Loading...</p>}
+            >
+              <Mapbox2naver />
+            </RenderAfterNavermapsLoaded>
+          </Grid>
+          <Grid container item xs={12}>
+            <Grid container item xs={12} className="way-desc">
+              <Link to="./map" className="way-description">
+                <Grid>
+                  <h2>오시는 길</h2>
+                </Grid>
+                <Grid>
+                  <h3>대구광역시 북구 침산남로 48 </h3>
+                </Grid>
+                <Grid>
+                  <p>지번 : 노원동 1가 9-15 (우) 41589</p>
+                </Grid>
+              </Link>
+            </Grid>
+            <Grid container item xs={12} className="phonenum">
+              <Grid xs={12}>
+                <h2>연락처 및 이메일</h2>
+              </Grid>
+              <Grid xs={12}>
+                <p>
+                  키친스 매장 : 053-777-7777 <br></br> 휴대폰 : 010-7777-7777
+                </p>
+              </Grid>
+              <Grid xs={12}>
+                <p>이메일 : kmshihi@gmail.com</p>
+              </Grid>
+            </Grid>
+          </Grid>
         </Grid>
       </Grid>
     );

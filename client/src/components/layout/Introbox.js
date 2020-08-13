@@ -5,7 +5,7 @@ import Grid from '@material-ui/core/Grid';
 const Introbox = () => {
   return (
     <Fragment>
-      <Grid container>
+      <Grid container className="pagebox">
         <Grid container item xs={2} justify="center" className="navbar-column">
           <Grid container item xs={12} direction="column" align="center">
             <h2>회사 소개</h2>

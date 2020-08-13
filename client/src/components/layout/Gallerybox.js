@@ -32,7 +32,7 @@ class Gallerybox2 extends Component {
     });
 
     return (
-      <div>
+      <div className="pagebox">
         <div className="gallerymainbox">
           <div className="navbar-column">
             <h2>꾸밈 사례</h2>

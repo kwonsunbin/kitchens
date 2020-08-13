@@ -57,7 +57,7 @@ class Noticebox extends Component {
     });
 
     return (
-      <Grid container>
+      <Grid container className="pagebox">
         <Grid container item xs={2} direction="column">
           <Grid item align="center">
             <h2>고객지원</h2>

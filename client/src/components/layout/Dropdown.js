@@ -2,7 +2,6 @@ import React, { Component, Fragment } from 'react';
 import { Link } from 'react-router-dom';
 import Grid from '@material-ui/core/Grid';
 import Subphotobox from './Subphotobox';
-import Mainbox1 from './Mainbox1';
 
 class Dropdown extends Component {
   constructor(props) {
@@ -10,21 +9,13 @@ class Dropdown extends Component {
     this.state = { isAtMain: false };
   }
 
-  componentDidMount() {
-    if (window.location.href === 'http://localhost:3000/') {
-      this.setState({ isAtMain: true });
-    }
-  }
-
   render() {
-    const photobox =
-      this.state.isAtMain === true ? <Mainbox1 /> : <Subphotobox />;
     if (this.props.clicked) {
       return (
         <div className="parent">
           <div>
             <Grid container item>
-              {photobox}
+              <Subphotobox />
             </Grid>
           </div>
           <div>
@@ -63,7 +54,11 @@ class Dropdown extends Component {
         </div>
       );
     } else {
-      return <Fragment>{photobox}</Fragment>;
+      return (
+        <Fragment>
+          <Subphotobox />
+        </Fragment>
+      );
     }
   }
 }

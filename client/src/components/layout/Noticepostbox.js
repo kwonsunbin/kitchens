@@ -5,7 +5,7 @@ import Grid from '@material-ui/core/Grid';
 class Noticepostbox extends Component {
   render() {
     return (
-      <Fragment>
+      <Fragment className="pagebox">
         <Grid container className="postcontentmainbox">
           <Grid container item xs={2} className="navbar-column">
             <h2>고객지원</h2>

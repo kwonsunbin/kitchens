@@ -5,7 +5,12 @@ const Subphotobox = () => {
   return (
     <Grid container className="subphotobox">
       <Grid item>
-        <img src="../gallery1_copy.jpg" width="100%" alt="bookcase2" />
+        <img
+          src="../gallery1_copy.jpg"
+          width="100%"
+          height="100%"
+          alt="bookcase2"
+        />
       </Grid>
     </Grid>
   );
