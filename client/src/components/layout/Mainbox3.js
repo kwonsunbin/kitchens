@@ -25,19 +25,26 @@ class Mainbox3 extends Component {
     });
 
     return (
-      <Grid container className="mainbox3">
+      <Grid container>
         <Grid container item xs={5} className="notice">
-          <div className="notice-title">
-            <Link to="./notice">공지사항</Link>
-            <Link to="./notice" className="more">
-              더보기
-            </Link>
-          </div>
+          <Grid container item xs={12} className="notice-title">
+            <Grid item xs={6}>
+              <Link to="./notice" className="rhdwltkgkd">
+                공지사항
+              </Link>
+            </Grid>
+            <Grid item xs={6} align="right">
+              <Link to="./notice" className="more">
+                더보기
+              </Link>
+            </Grid>
+          </Grid>
 
-          <ul>{list}</ul>
+          {list}
         </Grid>
+
         <Grid container item xs={7} className="way">
-          <Grid container item xs={12}>
+          <Grid container item className="hi" xs={6}>
             <RenderAfterNavermapsLoaded
               ncpClientId={'vw4iuq2zy5'} // 자신의 네이버 계정에서 발급받은 Client ID
               error={<p>Maps Load Error</p>}
@@ -46,7 +53,8 @@ class Mainbox3 extends Component {
               <Mapbox2naver />
             </RenderAfterNavermapsLoaded>
           </Grid>
-          <Grid container item xs={12}>
+
+          <Grid container item className="bye" xs={6}>
             <Grid container item xs={12} className="way-desc">
               <Link to="./map" className="way-description">
                 <Grid>
@@ -60,6 +68,7 @@ class Mainbox3 extends Component {
                 </Grid>
               </Link>
             </Grid>
+
             <Grid container item xs={12} className="phonenum">
               <Grid xs={12}>
                 <h2>연락처 및 이메일</h2>
@@ -67,10 +76,9 @@ class Mainbox3 extends Component {
               <Grid xs={12}>
                 <p>
                   키친스 매장 : 053-777-7777 <br></br> 휴대폰 : 010-7777-7777
+                  <br></br>
+                  이메일 : kmshihi@gmail.com
                 </p>
-              </Grid>
-              <Grid xs={12}>
-                <p>이메일 : kmshihi@gmail.com</p>
               </Grid>
             </Grid>
           </Grid>
