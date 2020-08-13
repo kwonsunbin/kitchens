@@ -18,7 +18,7 @@ import Container from '@material-ui/core/Container';
 
 const App = () => (
   <MuiThemeProvider>
-    <Container maxWidth="lg">
+    <Container maxWidth="lg" height="100%">
       <Router>
         <Fragment>
           <Navbar />
