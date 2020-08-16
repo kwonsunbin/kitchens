@@ -34,9 +34,14 @@ a {
 .noticepostboxtop {
   margin-top: 2vw;
 }
-.postpiecepiece {
+.postshowbox .postpiecepiece {
   line-height: 2.3vw;
 }
+
+.postshowboxsmall .postpiecepiece {
+  line-height: 5vw;
+}
+
 body {
   margin: 0;
   font-family: 'Nanum Gothic', sans-serif;
@@ -58,12 +63,24 @@ ul {
   height: 10vw;
 }
 
+.dropdownsmall {
+  opacity: 0.7;
+  background-color: black;
+  height: 10vw;
+}
+
 .noticebar {
   border-bottom: 0.02vw gray solid;
   border-top: 0.02vw gray solid;
 }
 .dropdown a {
   color: white;
+}
+
+.dropdownsmall a {
+  color: white;
+  font-size: 2.5vw;
+  padding: 1vw;
 }
 .hi {
   padding-left: 0.5vw;
@@ -136,15 +153,83 @@ ul {
 .mainbox2 .gallery .products ul li:hover {
   opacity: 0.5;
 }
+
+.mainbox2small {
+  font-size: 2vw;
+  padding-bottom: 1vw;
+  display: grid;
+  grid-template-columns: 2fr 5fr;
+}
+.mainbox2small .linkbox {
+  padding-right: 1vw;
+  padding-bottom: 0.5vw;
+}
+.mainbox2small .linkbox .linkbox-tel {
+  border-bottom: 0.05vw gray solid;
+}
+.mainbox2small .linkbox .linkbox1 {
+  border-bottom: 0.05vw gray solid;
+}
+.mainbox2small .linkbox .linkbox1:hover {
+  background-color: #f6f6f6;
+}
+.mainbox2small .linkbox .linkbox2 {
+  border-bottom: 0.05vw gray solid;
+}
+.mainbox2small .linkbox .linkbox2:hover {
+  background-color: #f6f6f6;
+}
+.mainbox2small .linkbox .linkbox3 {
+  border-bottom: 0.05vw gray solid;
+}
+.mainbox2small .gallery .title {
+  display: grid;
+  grid-auto-flow: column;
+}
+.mainbox2small .title-title {
+  margin-top: 2vw;
+  font-size: 3.5vw;
+}
+.mainbox2small .more {
+  align-self: end;
+  margin-top: 3vw;
+  justify-self: end;
+  font-size: 2.5vw;
+}
+.mainbox2small .gallery .title .more:hover {
+  font-size: 1vw;
+}
+.mainbox2small .gallery .products {
+  display: grid;
+  justify-self: start;
+  padding: 0;
+}
+.mainbox2small .gallery .products ul {
+  display: grid;
+  justify-self: center;
+  grid-auto-flow: column;
+  grid-gap: 20px;
+  padding-inline-start: 0;
+}
+.mainbox2small .gallery .products ul li:hover {
+  opacity: 0.5;
+}
+
 .mainbox3 {
   display: grid;
   grid-template-columns: 1fr 2fr;
   margin-top: 1vw;
 }
+
+.smallmainbox3 {
+  font-size: 2vw;
+}
 .notice {
   padding-right: 1vw;
 }
-
+.rhdwltkgkdsmall {
+  font-size: 3.6vw;
+}
 .mainbox3 .notice ul {
   display: grid;
   align-items: start;
@@ -178,6 +263,10 @@ ul {
   background-color: #f6f6f6;
 }
 
+.way-descsmall:hover {
+  background-color: #f6f6f6;
+}
+
 .full {
   min-height: 82.5vh;
 }
@@ -199,6 +288,22 @@ ul {
   grid-auto-flow: row;
   color: gray;
 }
+
+.footersmall {
+  background-color: #f6f6f6;
+  margin-top: 2vw;
+  font-size: 2vw;
+}
+.footersmall .footer-logo {
+  align-self: center;
+  justify-self: center;
+}
+.footersmall .footer-desc {
+  display: grid;
+  grid-auto-flow: row;
+  color: gray;
+}
+
 .rhdwltkgkd {
   font-size: 1.3vw;
 }
@@ -283,6 +388,10 @@ ul {
   margin-top: 2vw;
   grid-template-rows: 80px 800px;
   background-color: grey;
+}
+.draftboxsmall {
+  font-size: 2vw;
+  line-height: 3vw;
 }
 .postmainbox .draftbox .draftbox-head {
   justify-items: start;
@@ -384,7 +493,19 @@ ul {
   display: grid;
   background-color: #f6f6f6;
 }
+.noticesmall {
+  padding-bottom: 3vw;
+}
 
+.noticesmall .postpiecepiece {
+  line-height: 4vw;
+}
+
+.pageboxsmall {
+  margin-top: 2vw;
+  font-size: 2vw;
+  line-height: 3vw;
+}
 #noticebacklink {
   display: grid;
   justify-items: end;
@@ -541,4 +662,8 @@ ul {
 .parent div {
   grid-row-start: 1;
   grid-column-start: 1;
+}
+
+.smallnavbar p {
+  font-size: 3vw;
 }

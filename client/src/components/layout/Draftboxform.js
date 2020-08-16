@@ -55,7 +55,7 @@ class Draftboxform extends Component {
 
   render() {
     return (
-      <Grid container item xs={6}>
+      <Grid container item xs={9}>
         <form onSubmit={this.handleSubmit}>
           <Grid item className="h2box" xs={12}>
             <h2 className="tkdeka">상담 및 문의</h2>

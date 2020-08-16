@@ -1,7 +1,8 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import { Link } from 'react-router-dom';
 import Draftboxform from './Draftboxform';
 import Grid from '@material-ui/core/Grid';
+import Hidden from '@material-ui/core/Hidden';
 
 class Draftbox extends Component {
   constructor(props) {
@@ -23,24 +24,31 @@ class Draftbox extends Component {
 
   render() {
     return (
-      <Grid container justify="center" className="draftbox">
-        <Grid container item xs={2} className="navbar-column">
-          <Grid item xs={12} align="center">
-            <h2>고객 지원</h2>
-            <Grid container item xs={12}>
+      <Fragment>
+        <Hidden smDown>
+          <Grid container justify="center" className="draftbox">
+            <Grid container item xs={3} className="navbar-column">
               <Grid item xs={12} align="center">
-                <Link to="./notice">공지사항</Link>
-              </Grid>
-              <Grid item xs={12} align="center">
-                <Link to="./draft">상담 및 문의</Link>
+                <h2>고객 지원</h2>
+                <Grid container item xs={12}>
+                  <Grid item xs={12} align="center">
+                    <Link to="./notice">공지사항</Link>
+                  </Grid>
+                  <Grid item xs={12} align="center">
+                    <Link to="./draft">상담 및 문의</Link>
+                  </Grid>
+                </Grid>
               </Grid>
             </Grid>
+            <Draftboxform onCreate={this.props.onCreate} />
           </Grid>
-        </Grid>
-        <Grid item xs={2}></Grid>
-        <Draftboxform onCreate={this.props.onCreate} />
-        <Grid item xs={2}></Grid>
-      </Grid>
+        </Hidden>
+        <Hidden mdUp>
+          <Grid container item xs={12} className="draftboxsmall">
+            <Draftboxform onCreate={this.props.onCreate} />
+          </Grid>
+        </Hidden>
+      </Fragment>
     );
   }
 }
