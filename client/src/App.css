@@ -475,7 +475,9 @@ ul {
   width: 70%;
   grid-template-rows: 30px 30px;
 }
-
+.manage3-content {
+  margin-bottom: 2vw;
+}
 .manage-photo {
   display: grid;
   width: 70%;

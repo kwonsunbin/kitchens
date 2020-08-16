@@ -44,7 +44,7 @@ class Gallerybox2 extends Component {
           <Grid item>
             <h1>갤러리</h1>
           </Grid>
-          <Grid className="photoboxmain">{parts}</Grid>
+          <Grid className="photoboxmain">{parts.reverse()}</Grid>
         </Grid>
       </Grid>
     );

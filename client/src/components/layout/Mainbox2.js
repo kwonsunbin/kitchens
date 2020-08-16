@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import { Link } from 'react-router-dom';
 import uuid from 'react-uuid';
 import axios from 'axios';
@@ -41,24 +41,25 @@ class Mainbox2 extends Component {
         <Grid container item xs={4} className="linkbox">
           <Grid container item xs={12} className="linkbox-tel">
             <Grid item xs={12}>
-              <h2 className="mz">전화 상담 및 문의</h2>
+              <h3 className="m1">전화 상담 및 문의</h3>
             </Grid>
             <Grid item xs={12}>
-              <p>
-                <strong>키친스 매장</strong> : 053-766-0411<br></br>{' '}
-                <strong>휴대폰</strong> : 010-4016-8890
-              </p>
+              <strong>키친스 매장</strong> : 053-766-0411&nbsp;/&nbsp;&nbsp;
+              <strong>휴대폰</strong> : 010-4016-8890<br></br>
+              <strong>이메일</strong> : kidhanssem@naver.com
             </Grid>
           </Grid>
 
           <Grid container item xs={12} className="linkbox1">
             <Link to="./draft">
-              <Grid>
-                <h3 className="m1">온라인 상담 및 문의</h3>
-              </Grid>
-              <Grid>
-                <p className="m1">바로가기</p>
-              </Grid>
+              <Fragment>
+                <Grid>
+                  <h3 className="m1">온라인 상담 및 문의</h3>
+                </Grid>
+                <Grid>
+                  <p className="m1">바로가기</p>
+                </Grid>
+              </Fragment>
             </Link>
           </Grid>
           <Grid container item xs={12} className="linkbox2">

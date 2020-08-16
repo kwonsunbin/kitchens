@@ -36,10 +36,10 @@ class Manage4 extends Component {
                 }
               })
               .catch(function (error) {
-                if (error.response) {
-                  swal('공지 id를 확인해주세요');
-                } else {
-                  swal('에러!');
+                if (error.response.status === 403) {
+                  swal('로그인 해주세요');
+                } else if (error.response) {
+                  swal('사진 id를 확인해주세요');
                 }
               });
 
