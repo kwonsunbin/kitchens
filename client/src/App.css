@@ -39,7 +39,7 @@ a {
 }
 
 .postshowboxsmall .postpiecepiece {
-  line-height: 5vw;
+  line-height: 7vw;
 }
 
 body {
@@ -79,7 +79,7 @@ ul {
 
 .dropdownsmall a {
   color: white;
-  font-size: 2.5vw;
+  font-size: 3.5vw;
   padding: 1vw;
 }
 .hi {
@@ -155,14 +155,14 @@ ul {
 }
 
 .mainbox2small {
-  font-size: 2vw;
+  font-size: 3vw;
   padding-bottom: 1vw;
   display: grid;
   grid-template-columns: 2fr 5fr;
 }
 .mainbox2small .linkbox {
   padding-right: 1vw;
-  padding-bottom: 0.5vw;
+  padding-bottom: 1vw;
 }
 .mainbox2small .linkbox .linkbox-tel {
   border-bottom: 0.05vw gray solid;
@@ -188,17 +188,9 @@ ul {
 }
 .mainbox2small .title-title {
   margin-top: 2vw;
-  font-size: 3.5vw;
+  font-size: 5vw;
 }
-.mainbox2small .more {
-  align-self: end;
-  margin-top: 3vw;
-  justify-self: end;
-  font-size: 2.5vw;
-}
-.mainbox2small .gallery .title .more:hover {
-  font-size: 1vw;
-}
+
 .mainbox2small .gallery .products {
   display: grid;
   justify-self: start;
@@ -222,13 +214,13 @@ ul {
 }
 
 .smallmainbox3 {
-  font-size: 2vw;
+  font-size: 3vw;
 }
 .notice {
   padding-right: 1vw;
 }
 .rhdwltkgkdsmall {
-  font-size: 3.6vw;
+  font-size: 5vw;
 }
 .mainbox3 .notice ul {
   display: grid;
@@ -292,13 +284,18 @@ ul {
 .footersmall {
   background-color: #f6f6f6;
   margin-top: 2vw;
-  font-size: 2vw;
+  font-size: 4vw;
 }
 .footersmall .footer-logo {
+  font-size: 4.5vw;
   align-self: center;
   justify-self: center;
 }
 .footersmall .footer-desc {
+  font-size: 2.5vw;
+  text-align: center;
+  align-self: center;
+
   display: grid;
   grid-auto-flow: row;
   color: gray;
@@ -390,8 +387,8 @@ ul {
   background-color: grey;
 }
 .draftboxsmall {
-  font-size: 2vw;
-  line-height: 3vw;
+  font-size: 3.5vw;
+  line-height: 4vw;
 }
 .postmainbox .draftbox .draftbox-head {
   justify-items: start;
@@ -498,13 +495,13 @@ ul {
 }
 
 .noticesmall .postpiecepiece {
-  line-height: 4vw;
+  line-height: 5vw;
 }
 
 .pageboxsmall {
   margin-top: 2vw;
-  font-size: 2vw;
-  line-height: 3vw;
+  font-size: 3vw;
+  line-height: 4vw;
 }
 #noticebacklink {
   display: grid;
@@ -526,14 +523,23 @@ ul {
 .mapimg {
   justify-self: center;
 }
-
+.tnwlq {
+  font-size: 2.5vw;
+  line-height: 4vw;
+}
 .draftbox {
   margin-top: 2vw;
 }
 
 .fullform {
   width: 100%;
-  height: 2vw;
+  height: 3vw;
+  font-size: 1vw;
+}
+
+.fullformsmall {
+  width: 100%;
+  height: 5vw;
   font-size: 1vw;
 }
 .tkdeka {
@@ -665,5 +671,5 @@ ul {
 }
 
 .smallnavbar p {
-  font-size: 3vw;
+  font-size: 4.5vw;
 }

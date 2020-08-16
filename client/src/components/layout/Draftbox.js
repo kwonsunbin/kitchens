@@ -1,6 +1,7 @@
 import React, { Component, Fragment } from 'react';
 import { Link } from 'react-router-dom';
 import Draftboxform from './Draftboxform';
+import Draftboxformsmall from './Draftboxformsmall';
 import Grid from '@material-ui/core/Grid';
 import Hidden from '@material-ui/core/Hidden';
 
@@ -45,7 +46,7 @@ class Draftbox extends Component {
         </Hidden>
         <Hidden mdUp>
           <Grid container item xs={12} className="draftboxsmall">
-            <Draftboxform onCreate={this.props.onCreate} />
+            <Draftboxformsmall onCreate={this.props.onCreate} />
           </Grid>
         </Hidden>
       </Fragment>

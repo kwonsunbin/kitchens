@@ -140,7 +140,7 @@ class Mainbox2 extends Component {
                 item
                 justify="flex-start"
                 alignItems="center"
-                xs={2}
+                xs={12}
               >
                 <Grid>
                   <Link to="./gallery" className="title-title">
@@ -148,8 +148,6 @@ class Mainbox2 extends Component {
                   </Link>
                 </Grid>
               </Grid>
-              <Grid item xs={8}></Grid>
-              <Grid item xs={2} align="end"></Grid>
 
               <div className="products">
                 <ul>

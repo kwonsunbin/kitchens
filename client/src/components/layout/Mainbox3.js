@@ -104,6 +104,9 @@ class Mainbox3 extends Component {
                   <Link to="./map" className="way-description">
                     <Grid>
                       <h2>오시는 길</h2>
+                      <p>
+                        <br></br>
+                      </p>
                     </Grid>
                     <Grid>
                       <h3>대구광역시 북구 침산남로 48 </h3>

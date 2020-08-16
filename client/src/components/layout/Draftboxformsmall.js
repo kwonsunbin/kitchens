@@ -3,7 +3,7 @@ import { confirmAlert } from 'react-confirm-alert'; // Import
 import 'react-confirm-alert/src/react-confirm-alert.css';
 import Grid from '@material-ui/core/Grid';
 
-class Draftboxform extends Component {
+class Draftboxformsmall extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -55,7 +55,7 @@ class Draftboxform extends Component {
 
   render() {
     return (
-      <Grid container item xs={9}>
+      <Grid container item xs={12}>
         <form onSubmit={this.handleSubmit}>
           <Grid item className="h2box" xs={12}>
             <h2 className="tkdeka">상담 및 문의</h2>
@@ -111,7 +111,7 @@ class Draftboxform extends Component {
             />
           </Grid>
 
-          <Grid item xs={12}>
+          <Grid item xs={12} className="tnwlq">
             키친스는 고객의 개인정보를 아래와 같은 목적으로 수집·이용합니다.
             회사는 고객으로 부터 제공 받은 개인정보를 아래의 목적 이외로는
             사용하지 않으며, 만약 이용 목적을 변경하거나 이용 목적 범위를
@@ -141,4 +141,4 @@ class Draftboxform extends Component {
   }
 }
 
-export default Draftboxform;
+export default Draftboxformsmall;
