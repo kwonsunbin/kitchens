@@ -1,5 +1,4 @@
-const config = require('../config/config');
-const secret = config.secret;
+const secret = process.env.secret;
 const User = require('../models/User');
 const jwt = require('jsonwebtoken');
 

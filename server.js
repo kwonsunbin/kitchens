@@ -1,5 +1,4 @@
 const path = require('path');
-const config = require('./config/config');
 
 const express = require('express');
 const dotenv = require('dotenv');
@@ -11,9 +10,6 @@ var cookieParser = require('cookie-parser');
 
 const connectDB = require('./config/db');
 const cors = require('cors');
-
-// Load env vars
-dotenv.config({ path: './config/config.env' });
 
 // ConnectDB to Database
 connectDB();
@@ -43,7 +39,7 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 app.use(express.static(__dirname + '/public'));
-app.set('jwt-secret', config.secret);
+app.set('jwt-secret', process.env.secret);
 app.use(cookieParser());
 
 // Dev loggin middleware
