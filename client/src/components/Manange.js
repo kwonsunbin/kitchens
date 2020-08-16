@@ -5,6 +5,7 @@ import Manage3 from './layout/Manage3';
 import Manage4 from './layout/Manage4';
 import Manage5 from './layout/Manage5.js';
 import Grid from '@material-ui/core/Grid';
+import swal from 'sweetalert';
 
 import axios from 'axios';
 
@@ -22,14 +23,14 @@ class Manage extends Component {
     })
       .then((res) => {
         if (res.status === 201) {
-          alert('등록되었습니다');
+          swal('등록되었습니다');
         }
       })
       .catch(function (error) {
-        if (error.response) {
-          alert('모든 항목을 채워주세요');
+        if (error.response.status === 403) {
+          swal('로그인 해주세요');
         } else {
-          alert('에러!');
+          swal('모든 항목을 채워주세요');
         }
       });
   }

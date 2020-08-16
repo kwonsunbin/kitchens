@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React, { Component } from 'react';
 import './App.css';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Navbar from './components/layout/Navbar';
@@ -13,14 +13,14 @@ import Gallerypost from './components/Gallerypost';
 import Noticepost from './components/Noticepost';
 import Manage from './components/Manange';
 import Notfound from './components/Notfound';
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import Login from './components/Login';
 import Container from '@material-ui/core/Container';
 
-const App = () => (
-  <MuiThemeProvider>
-    <Container maxWidth="lg" height="100%">
-      <Router>
-        <Fragment>
+class App extends Component {
+  render() {
+    return (
+      <Container maxWidth="lg" height="100%">
+        <Router>
           <Navbar />
           <Switch>
             <Route exact path="/" component={Main} />
@@ -32,13 +32,14 @@ const App = () => (
             <Route exact path="/noticepost/:id" component={Noticepost} />
             <Route exact path="/gallerypost/:id" component={Gallerypost} />
             <Route exact path="/manage" component={Manage} />
+            <Route exact path="/login" component={Login} />
             <Route component={Notfound} />
           </Switch>
           <Footer />
-        </Fragment>
-      </Router>
-    </Container>
-  </MuiThemeProvider>
-);
+        </Router>
+      </Container>
+    );
+  }
+}
 
 export default App;

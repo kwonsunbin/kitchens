@@ -7,6 +7,13 @@ a {
   color: black;
 }
 
+.mz {
+  margin: 0;
+}
+.m1 {
+  margin-top: 0.5vw;
+  margin-bottom: 0.2vw;
+}
 .tblidx {
   background-color: #f6f6f6;
   border-bottom: black solid 0.02vw;
@@ -58,7 +65,8 @@ ul {
   color: white;
 }
 .hi {
-  padding: 1vw;
+  padding-left: 0.5vw;
+  padding-right: 0.5vw;
 }
 .pagination-notice {
   border-top: 0.02vw gray solid;
@@ -174,6 +182,7 @@ ul {
 }
 
 .fullform {
+  font-size: 0.9vw;
   width: 100%;
   height: 100%;
 }
@@ -439,6 +448,12 @@ ul {
 
 .imgshow {
   width: 100%;
+  margin-top: 0.8vw;
+}
+
+.arrow {
+  font-size: 1.3vw;
+  margin-top: 1.3vw;
 }
 
 .background {

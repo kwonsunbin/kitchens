@@ -6,16 +6,13 @@ class Noticepostbox extends Component {
   render() {
     return (
       <Grid container className="noticepostboxtop">
-        <Grid container item xs={2}>
-          <Grid conainer item xs={12} align="center">
+        <Grid container item xs={2} align="center">
+          <Grid item xs={12} align="center">
             <h2>고객지원</h2>
-
-            <Grid item xs={12} align="center">
-              <Link to="./notice">공지사항</Link>
-            </Grid>
-            <Grid item xs={12} align="center">
-              <Link to="./draft">상담 및 문의</Link>
-            </Grid>
+            <Link to="./notice">
+              공지사항<br></br>
+            </Link>
+            <Link to="./draft">상담 및 문의</Link>
           </Grid>
         </Grid>
 
@@ -45,7 +42,7 @@ class Noticepostbox extends Component {
             <p>{this.props.content.content}</p>
           </Grid>
         </Grid>
-        <Grid item xs={12} justify="flex-end">
+        <Grid item xs={12}>
           <Link to="./notice" id="noticebacklink">
             목록으로
           </Link>

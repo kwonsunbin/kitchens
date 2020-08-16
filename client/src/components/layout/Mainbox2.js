@@ -41,7 +41,7 @@ class Mainbox2 extends Component {
         <Grid container item xs={4} className="linkbox">
           <Grid container item xs={12} className="linkbox-tel">
             <Grid item xs={12}>
-              <h2>전화 상담 및 문의</h2>
+              <h2 className="mz">전화 상담 및 문의</h2>
             </Grid>
             <Grid item xs={12}>
               <p>
@@ -54,20 +54,20 @@ class Mainbox2 extends Component {
           <Grid container item xs={12} className="linkbox1">
             <Link to="./draft">
               <Grid>
-                <h3>온라인 상담 및 문의</h3>
+                <h3 className="m1">온라인 상담 및 문의</h3>
               </Grid>
               <Grid>
-                <p>바로가기</p>
+                <p className="m1">바로가기</p>
               </Grid>
             </Link>
           </Grid>
           <Grid container item xs={12} className="linkbox2">
             <Link to="./intro">
               <Grid>
-                <h3>회사 소개</h3>
+                <h3 className="m1">회사 소개</h3>
               </Grid>
               <Grid>
-                <p>바로가기</p>
+                <p className="m1">바로가기</p>
               </Grid>
             </Link>
           </Grid>

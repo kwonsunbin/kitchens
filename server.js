@@ -1,10 +1,13 @@
 const path = require('path');
+const config = require('./config/config');
+
 const express = require('express');
 const dotenv = require('dotenv');
 const morgan = require('morgan');
 const colors = require('colors');
 const errorHandler = require('./middleware/error');
 const multer = require('multer');
+var cookieParser = require('cookie-parser');
 
 const connectDB = require('./config/db');
 const cors = require('cors');
@@ -32,6 +35,7 @@ const requests = require('./routes/requests');
 const users = require('./routes/users');
 const notices = require('./routes/notices');
 const photos = require('./routes/photos');
+const login = require('./routes/login');
 
 const app = express();
 
@@ -39,6 +43,8 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 app.use(express.static(__dirname + '/public'));
+app.set('jwt-secret', config.secret);
+app.use(cookieParser());
 
 // Dev loggin middleware
 if (process.env.NODE_ENV === 'development') {
@@ -50,6 +56,7 @@ app.use('/api/v1/requests', requests);
 app.use('/api/v1/users', users);
 app.use('/api/v1/notices', notices);
 app.use('/api/v1/photos', photos);
+app.use('/api/v1/login', login);
 
 app.use(errorHandler);
 const PORT = process.env.PORT || 8080;

@@ -58,18 +58,18 @@ class Mainbox3 extends Component {
             <Grid container item xs={12} className="way-desc">
               <Link to="./map" className="way-description">
                 <Grid>
-                  <h2>오시는 길</h2>
+                  <h2 className="mz">오시는 길</h2>
                 </Grid>
                 <Grid>
-                  <h3>대구광역시 북구 침산남로 48 </h3>
+                  <h3 className="m1">대구광역시 북구 침산남로 48 </h3>
+                  지번 : 노원동 1가 9-15 (우) 41589
                 </Grid>
-                <Grid>지번 : 노원동 1가 9-15 (우) 41589</Grid>
               </Link>
             </Grid>
 
             <Grid container item xs={12} className="phonenum">
               <Grid>
-                <h2>연락처 및 이메일</h2>
+                <h2 className="m1">연락처 및 이메일</h2>
               </Grid>
               <Grid item xs={12}>
                 키친스 매장 : 053-766-7411 <br></br> 휴대폰 : 010-4016-8890

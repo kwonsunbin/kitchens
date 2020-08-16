@@ -7,7 +7,10 @@ class Postpiecemain extends Component {
     return (
       <Grid container item className="postpiecepiece" xs={12}>
         <Grid item xs={10} align="center">
-          <Link to="./noticepost/:id" className="postpiece-main">
+          <Link
+            to={`./noticepost/${this.props.data._id}`}
+            className="postpiece-main"
+          >
             {this.props.data.title}
           </Link>
         </Grid>

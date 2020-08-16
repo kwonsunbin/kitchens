@@ -9,11 +9,11 @@ class Gallerypost extends Component {
         <Grid container>
           <Grid container item xs={12}>
             <Link to="../gallery">
-              <div>
-                <i className="fas fa-arrow-left"></i>
+              <div className="arrow">
+                <i className="fas fa-arrow-left"></i> 뒤로가기
               </div>
             </Link>
-            <Grid item>
+            <Grid item xs={12}>
               <div className="imgshow">
                 <img
                   src={
@@ -21,6 +21,8 @@ class Gallerypost extends Component {
                     '/uploads/' +
                     this.props.match.params.id
                   }
+                  height="100%"
+                  width="100%"
                   alt="photos"
                   className="imgshow"
                 ></img>
