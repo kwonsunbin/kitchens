@@ -110,7 +110,7 @@ class Mainbox3 extends Component {
                     </Grid>
                     <Grid>
                       <h3>대구광역시 북구 침산남로 48 </h3>
-                      <p>지번 : 노원동 1가 9-15 (우) 41589</p>
+                      <p>지번 : 노원동 1가 9-15 41589</p>
                       <p>
                         <br></br>
                         <br></br>

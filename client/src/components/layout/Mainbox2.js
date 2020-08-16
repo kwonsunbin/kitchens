@@ -125,7 +125,7 @@ class Mainbox2 extends Component {
               </Grid>
               <Grid container item xs={12} className="phonenum">
                 <Grid>
-                  <h3>연락처 및 이메일</h3>
+                  <h3 className="m2">연락처 및 이메일</h3>
                 </Grid>
                 <Grid item xs={12}>
                   <p>키친스 매장 : 053-766-7411 / 휴대폰 : 010-4016-8890 </p>

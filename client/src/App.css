@@ -14,6 +14,12 @@ a {
   margin-top: 0.5vw;
   margin-bottom: 0.2vw;
 }
+
+.m2 {
+  margin-top: 2.5vw;
+  margin-bottom: 1.5vw;
+}
+
 .tblidx {
   background-color: #f6f6f6;
   border-bottom: black solid 0.02vw;
@@ -26,13 +32,22 @@ a {
   border-right: black solid 0.02vw;
   padding: 0.2vw;
 }
-
+.smallgp .arrow {
+  font-size: 4vw;
+  line-height: 4vw;
+}
 .noticepbox {
   border-top: black solid 0.02vw;
   border-left: black solid 0.02vw;
 }
 .noticepostboxtop {
   margin-top: 2vw;
+}
+.noticepostboxtopsmall {
+  margin-top: 2vw;
+  font-size: 3.5vw;
+  line-height: 5vw;
+  padding: 2vw;
 }
 .postshowbox .postpiecepiece {
   line-height: 2.3vw;
@@ -255,6 +270,10 @@ ul {
   background-color: #f6f6f6;
 }
 
+.way-descsmall {
+  padding-left: 2vw;
+}
+
 .way-descsmall:hover {
   background-color: #f6f6f6;
 }
@@ -288,6 +307,7 @@ ul {
 }
 .footersmall .footer-logo {
   font-size: 4.5vw;
+  padding-left: 1vw;
   align-self: center;
   justify-self: center;
 }
