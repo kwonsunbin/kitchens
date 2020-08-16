@@ -19,6 +19,7 @@ a {
   border-bottom: black solid 0.02vw;
   border-right: black solid 0.02vw;
   padding: 0.2vw;
+  text-align: center;
 }
 .tblc {
   border-bottom: black solid 0.02vw;
@@ -181,11 +182,6 @@ ul {
   min-height: 82.5vh;
 }
 
-.fullform {
-  font-size: 0.9vw;
-  width: 100%;
-  height: 100%;
-}
 .mainbox3 .way .way-desc .way-description:hover {
   background-color: #f6f6f6;
 }
@@ -413,17 +409,20 @@ ul {
 .draftbox {
   margin-top: 2vw;
 }
-.draftbox form {
-  justify-content: center;
-  display: grid;
-  grid-gap: 5px;
-  grid-template-rows: 45px 30px 30px 30px 30px 250px 150px 20px 30px;
+
+.fullform {
+  width: 100%;
+  height: 2vw;
+  font-size: 1vw;
 }
-.draftbox form .h2box {
-  justify-self: center;
-  border-bottom: 0.02vw gray solid;
+.tkdeka {
+  text-align: center;
 }
 
+.ansdmlsodyd {
+  width: 100%;
+  height: 10vw;
+}
 .agreementcheckbox {
   display: grid;
   grid-template-columns: 70px 30px;

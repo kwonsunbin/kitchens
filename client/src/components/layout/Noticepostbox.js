@@ -18,32 +18,32 @@ class Noticepostbox extends Component {
 
         <Grid container item xs={10} className="noticepbox">
           <Grid item xs={2} className="tblidx">
-            <p className="idx">제목</p>
+            <div className="idx">제목</div>
           </Grid>
           <Grid item xs={10} className="tblc">
-            <p>{this.props.content.title}</p>
+            <div>{this.props.content.title}</div>
           </Grid>
           <Grid item xs={2} className="tblidx">
-            <p className="idx">작성자</p>
+            <div className="idx">작성자</div>
           </Grid>
           <Grid item xs={10} className="tblc">
-            <p>{this.props.content.authorName}</p>
+            <div>{this.props.content.authorName}</div>
           </Grid>
           <Grid item xs={2} className="tblidx">
-            <p className="idx">작성일시</p>
+            <div className="idx">작성일시</div>
           </Grid>
           <Grid item xs={10} className="tblc">
-            <p>{this.props.content.timestamp}</p>
+            <div>{this.props.content.timestamp}</div>
           </Grid>
           <Grid item xs={2} className="tblidx">
-            <p className="idx">내용</p>
+            <div className="idx">내용</div>
           </Grid>
           <Grid item xs={10} className="tblc">
-            <p>{this.props.content.content}</p>
+            <div>{this.props.content.content}</div>
           </Grid>
         </Grid>
         <Grid item xs={12}>
-          <Link to="./notice" id="noticebacklink">
+          <Link to="../notice" id="noticebacklink">
             목록으로
           </Link>
         </Grid>

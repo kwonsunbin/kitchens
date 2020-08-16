@@ -1,12 +1,18 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import Gallerybox from './layout/Gallerybox';
+import Navbar from './layout/Navbar';
+import Footer from './layout/Footer';
 
 class Gallery extends Component {
   render() {
     return (
-      <div className="full">
-        <Gallerybox />
-      </div>
+      <Fragment>
+        <Navbar></Navbar>
+        <div className="full">
+          <Gallerybox />
+        </div>
+        <Footer></Footer>
+      </Fragment>
     );
   }
 }

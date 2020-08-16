@@ -10,7 +10,7 @@ class Gallerypost extends Component {
           <Grid container item xs={12}>
             <Link to="../gallery">
               <div className="arrow">
-                <i className="fas fa-arrow-left"></i> 뒤로가기
+                <i className="fas fa-arrow-left"></i> 갤러리 가기
               </div>
             </Link>
             <Grid item xs={12}>

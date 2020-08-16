@@ -58,7 +58,7 @@ class Draftboxform extends Component {
       <Grid container item xs={6}>
         <form onSubmit={this.handleSubmit}>
           <Grid item className="h2box" xs={12}>
-            <h2>상담 및 문의</h2>
+            <h2 className="tkdeka">상담 및 문의</h2>
           </Grid>
 
           <Grid item xs={12}>
@@ -103,7 +103,7 @@ class Draftboxform extends Component {
 
           <Grid item xs={12}>
             <textarea
-              className="fullform"
+              className="ansdmlsodyd"
               placeholder="문의내용"
               value={this.state.content}
               onChange={this.handleChange}

@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import Navbar from './components/layout/Navbar';
-import Footer from './components/layout/Footer';
 import Main from './components/Main';
 import Gallery from './components/Gallery';
 import Notice from './components/Notice';
@@ -21,7 +19,6 @@ class App extends Component {
     return (
       <Container maxWidth="lg" height="100%">
         <Router>
-          <Navbar />
           <Switch>
             <Route exact path="/" component={Main} />
             <Route exact path="/gallery" component={Gallery} />
@@ -35,7 +32,6 @@ class App extends Component {
             <Route exact path="/login" component={Login} />
             <Route component={Notfound} />
           </Switch>
-          <Footer />
         </Router>
       </Container>
     );

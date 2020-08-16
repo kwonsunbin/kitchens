@@ -1,12 +1,18 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import Noticebox from './layout/Noticebox';
+import Navbar from './layout/Navbar';
+import Footer from './layout/Footer';
 
 class Notice extends Component {
   render() {
     return (
-      <div className="full">
-        <Noticebox />
-      </div>
+      <Fragment>
+        <Navbar></Navbar>
+        <div className="full">
+          <Noticebox />
+        </div>
+        <Footer></Footer>
+      </Fragment>
     );
   }
 }

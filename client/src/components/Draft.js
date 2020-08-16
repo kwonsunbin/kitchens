@@ -1,6 +1,8 @@
 import React, { Fragment, Component } from 'react';
 import Draftbox from './layout/Draftbox';
 import axios from 'axios';
+import Navbar from './layout/Navbar';
+import Footer from './layout/Footer';
 
 class Draft extends Component {
   constructor(props) {
@@ -30,13 +32,15 @@ class Draft extends Component {
 
   render() {
     return (
-      <div className="full">
-        <Fragment>
+      <Fragment>
+        <Navbar />
+        <div className="full">
           <div className="background">
             <Draftbox onCreate={this.handleCreate} />
           </div>
-        </Fragment>
-      </div>
+        </div>
+        <Footer />
+      </Fragment>
     );
   }
 }

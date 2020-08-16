@@ -1,6 +1,8 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import Noticepostbox from './layout/Noticepostbox';
 import axios from 'axios';
+import Navbar from './layout/Navbar';
+import Footer from './layout/Footer';
 
 class Noticepost extends Component {
   constructor(props) {
@@ -31,9 +33,13 @@ class Noticepost extends Component {
 
   render() {
     return (
-      <div className="full">
-        <Noticepostbox content={this.state.content} />
-      </div>
+      <Fragment>
+        <Navbar></Navbar>
+        <div className="full">
+          <Noticepostbox content={this.state.content} />
+        </div>
+        <Footer></Footer>
+      </Fragment>
     );
   }
 }

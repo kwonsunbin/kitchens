@@ -1,11 +1,17 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import Mapbox from './layout/Mapbox';
+import Navbar from './layout/Navbar';
+import Footer from './layout/Footer';
 
 const Map = () => {
   return (
-    <div className="full">
-      <Mapbox />
-    </div>
+    <Fragment>
+      <Navbar></Navbar>
+      <div className="full">
+        <Mapbox />
+      </div>
+      <Footer></Footer>
+    </Fragment>
   );
 };
 
