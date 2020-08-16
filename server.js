@@ -11,6 +11,8 @@ var cookieParser = require('cookie-parser');
 const connectDB = require('./config/db');
 const cors = require('cors');
 
+dotenv.config({ path: './config/config.env' });
+
 // ConnectDB to Database
 connectDB();
 
@@ -35,8 +37,9 @@ const login = require('./routes/login');
 
 const app = express();
 
+출처: //spiralmoon.tistory.com/entry/Nodejs-env-환경변수 [Spiral Moon's programming blog]
 // Body Parser
-app.use(express.json());
+https: app.use(express.json());
 app.use(cors());
 app.use(express.static(__dirname + '/public'));
 app.set('jwt-secret', process.env.secret);
