@@ -5,6 +5,8 @@ const dotenv = require('dotenv');
 const morgan = require('morgan');
 const colors = require('colors');
 const errorHandler = require('./middleware/error');
+var bodyParser = require('body-parser');
+
 const multer = require('multer');
 var cookieParser = require('cookie-parser');
 
@@ -16,18 +18,24 @@ dotenv.config({ path: './config/config.env' });
 // ConnectDB to Database
 connectDB();
 
+const app = express();
+
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
+
 var storage = multer.diskStorage({
   destination: function (req, file, cb) {
     cb(null, './client/public/uploads/');
   },
   filename: function (req, file, cb) {
-    cb(null, 'imgfile' + Date.now() + path.extname(file.originalname));
+    cb(null, Date.now() + file.originalname);
   },
 });
 
 var upload = multer({ storage: storage });
 
 module.exports = upload;
+
 // Route files
 const requests = require('./routes/requests');
 const users = require('./routes/users');
@@ -35,11 +43,7 @@ const notices = require('./routes/notices');
 const photos = require('./routes/photos');
 const login = require('./routes/login');
 
-const app = express();
-
-출처: //spiralmoon.tistory.com/entry/Nodejs-env-환경변수 [Spiral Moon's programming blog]
-// Body Parser
-https: app.use(express.json());
+app.use(express.json());
 app.use(cors());
 app.use(express.static(__dirname + '/public'));
 app.set('jwt-secret', process.env.secret);
@@ -58,6 +62,7 @@ app.use('/api/v1/photos', photos);
 app.use('/api/v1/login', login);
 
 app.use(errorHandler);
+
 const PORT = process.env.PORT || 8080;
 
 if (process.env.NODE_ENV === 'production') {

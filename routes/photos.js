@@ -1,32 +1,44 @@
 const express = require('express');
 const router = express.Router({ mergeParams: true });
-const upload = require('../server');
+const Photo = require('../models/Photo');
 const authMiddleware = require('../middleware/authMiddleware');
-
+const { getPhotos, deletePhoto, getPhoto } = require('../controllers/photos');
+const upload = require('../server');
+const path = require('path');
 const fs = require('fs');
+const advancedResults = require('../middleware/advancedResults');
 
-router.post('/upload', authMiddleware, upload.single('file'), (req, res) => {
-  console.log(req.file);
-
-  res.end('File is uploaded');
-});
-
-router.get('/getfs', (req, res) => {
-  const data = fs.readdirSync('./client/public/uploads');
-  res.status(200).json({
-    success: true,
-    data: data,
+router
+  .route('/')
+  .get(advancedResults(Photo), getPhotos)
+  .post(authMiddleware, upload.array('files'), (req, res, next) => {
+    const paths = req.files.map((f) => {
+      return f.filename;
+    });
+    var obj = {
+      title: req.body.title,
+      desc: req.body.desc,
+      kind: req.body.kind,
+      img: {
+        /* data: fs.readFileSync(
+          path.join(
+            __dirname + '/../client/public/uploads/' + req.file.filename
+          )
+        ), */
+        contentType: 'image/png',
+      },
+      path: paths,
+    };
+    Photo.create(obj, (err, item) => {
+      if (err) {
+        console.log(err);
+      } else {
+        // item.save();
+        res.redirect('/');
+      }
+    });
   });
-});
 
-router.delete('/:id', authMiddleware, (req, res) => {
-  fs.unlinkSync('./client/public/uploads/' + req.params.id, (err) => {
-    if (err) {
-      console.log('failed to delete local image:' + err);
-    } else {
-      console.log('successfully deleted local image');
-    }
-  });
-});
+router.route('/:id').delete(authMiddleware, deletePhoto).get(getPhoto);
 
 module.exports = router;

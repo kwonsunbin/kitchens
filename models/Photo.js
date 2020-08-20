@@ -1,22 +1,46 @@
 const mongoose = require('mongoose');
 
+Date.prototype.yyyymmdd = function () {
+  var yyyy = this.getFullYear().toString();
+  var mm = (this.getMonth() + 1).toString();
+  var dd = this.getDate().toString();
+  return (
+    yyyy + '.' + (mm[1] ? mm : '0' + mm[0]) + '.' + (dd[1] ? dd : '0' + dd[0])
+  );
+};
+
 const PhotoSchema = new mongoose.Schema({
-  authorName: {
+  title: {
     type: String,
     required: [true, 'Author required!'],
   },
-  path: {
+  desc: {
     type: String,
-    required: [true, 'Path required'],
+    required: [true, 'Desc required'],
   },
-  password: {
+  kind: {
     type: String,
-    match: ['1234', 'Please add a valid password'],
+    enum: ['가', '나', '다', '라', '마'],
+  },
+
+  path: [{ type: String }],
+
+  img: {
+    data: Buffer,
+    contentType: String,
   },
   createdAt: {
     type: Date,
     default: Date.now,
   },
+  timestamp: {
+    type: String,
+  },
+});
+
+PhotoSchema.pre('save', function (next) {
+  this.timestamp = new Date().yyyymmdd();
+  next();
 });
 
 module.exports = mongoose.model('Photo', PhotoSchema);

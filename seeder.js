@@ -12,7 +12,7 @@ const User = require('./models/User');
 const Request = require('./models/Request');
 const Photo = require('./models/Photo');
 
-mongoose.connect(process.env.MONGO_URI, {
+mongoose.connect(process.env.mongodbUri, {
   useNewUrlParser: true,
   useCreateIndex: true,
   useFindAndModify: false,

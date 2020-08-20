@@ -45,6 +45,9 @@ class Navbar extends Component {
                   <p>회사 소개</p>
                 </Grid>
                 <Grid item xs={2} align="center">
+                  <p>제품 소개</p>
+                </Grid>
+                <Grid item xs={2} align="center">
                   <p>꾸밈 사례</p>
                 </Grid>
                 <Grid item xs={2} align="center">
@@ -63,15 +66,11 @@ class Navbar extends Component {
                   <p className="navbarLogo">Kitchens</p>
                 </Link>
               </Grid>
-
-              <Grid item xs={3} align="center">
-                <p>회사 소개</p>
-              </Grid>
-              <Grid item xs={3} align="center">
-                <p>꾸밈 사례</p>
-              </Grid>
-              <Grid item xs={3} align="center">
-                <p>고객지원</p>
+              <Grid item xs={8}></Grid>
+              <Grid item xs={1} align="center">
+                <p>
+                  <i class="fas fa-bars"></i>
+                </p>
               </Grid>
             </Grid>
             <Dropdown clicked={this.state.isClicked} />

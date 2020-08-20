@@ -58,13 +58,13 @@ class Draftboxform extends Component {
       <Grid container item xs={9}>
         <form onSubmit={this.handleSubmit}>
           <Grid item className="h2box" xs={12}>
-            <h2 className="tkdeka">상담 및 문의</h2>
+            <h2 className="tkdeka">상담 및 견적 문의</h2>
           </Grid>
 
           <Grid item xs={12}>
             <input
-              className="fullformsmall"
-              placeholder="이름"
+              className="fullform"
+              placeholder="성함"
               value={this.state.authorName}
               onChange={this.handleChange}
               id="authorName"
@@ -73,8 +73,8 @@ class Draftboxform extends Component {
 
           <Grid item xs={12}>
             <input
-              className="fullformsmall"
-              placeholder="휴대폰 번호"
+              className="fullform"
+              placeholder="연락처"
               value={this.state.phone}
               onChange={this.handleChange}
               id="phone"
@@ -83,7 +83,7 @@ class Draftboxform extends Component {
 
           <Grid item xs={12}>
             <input
-              className="fullformsmall"
+              className="fullform"
               placeholder="이메일"
               value={this.state.email}
               onChange={this.handleChange}
@@ -93,8 +93,8 @@ class Draftboxform extends Component {
 
           <Grid item xs={12}>
             <input
-              className="fullformsmall"
-              placeholder="제목"
+              className="fullform"
+              placeholder="시공할 자택 주소 혹은 아파트 이름"
               value={this.state.title}
               onChange={this.handleChange}
               id="title"
@@ -104,7 +104,7 @@ class Draftboxform extends Component {
           <Grid item xs={12}>
             <textarea
               className="ansdmlsodyd"
-              placeholder="문의내용"
+              placeholder="시공할 가구 (싱크대/붙박이장/신발장/시스템장/기타 맞춤가구 등)"
               value={this.state.content}
               onChange={this.handleChange}
               id="content"
@@ -122,16 +122,14 @@ class Draftboxform extends Component {
             개인정보를 원칙적으로 개인정보의 수집 및 이용목적이 달성되면
             지체없이 파기됩니다.
           </Grid>
-
-          <Grid container item xs={12} justify="flex-end">
-            동의합니다
+          <Grid container>
+            <Grid item xs={12} align="end">
+              동의합니다
+              <input type="checkbox" onChange={this.handleChange} />
+            </Grid>
           </Grid>
-          <Grid container item xs={12} justify="flex-end">
-            <input type="checkbox" onChange={this.handleChange} />
-          </Grid>
-
-          <Grid item xs={12} className="fullformsmall">
-            <button className="fullformsmall" type="submit">
+          <Grid item xs={12} className="fullform">
+            <button className="fullform" type="submit">
               작성하기
             </button>
           </Grid>

@@ -59,7 +59,7 @@ class Manage3 extends Component {
       <Grid container className="manage3-content">
         <Grid item xs={2}></Grid>
         <Grid item xs={2} className="tblidx">
-          <p>제목</p>
+          <p>주소</p>
         </Grid>
         <Grid item xs={6} className="tblc">
           <p>{this.state.data.title}</p>
@@ -100,7 +100,7 @@ class Manage3 extends Component {
         <Grid item xs={2}></Grid>
         <Grid item xs={2}></Grid>
         <Grid item xs={2} className="tblidx">
-          <p>전화번호</p>
+          <p>연락처</p>
         </Grid>
         <Grid item xs={6} className="tblc">
           <p>{this.state.data.phone}</p>

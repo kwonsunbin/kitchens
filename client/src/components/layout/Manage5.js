@@ -62,7 +62,7 @@ class Manage5 extends Component {
       <Fragment>
         <form className="manage-notice2">
           <input
-            placeholder="사진 id 붙여넣기"
+            placeholder="id 붙여넣기"
             value={this.state.photoid}
             onChange={this.handleChange}
             id="photoid"

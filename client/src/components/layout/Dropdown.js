@@ -36,23 +36,34 @@ class Dropdown extends Component {
                       <Link to="../notice">공지사항</Link>
                     </Grid>
                     <Grid item xs={2} align="center">
-                      <Link to="../gallery">갤러리</Link>
+                      <Link to="../example">실제 시공 사례</Link>
                     </Grid>
                     <Grid item xs={2} align="center">
-                      <Link to="../intro">회사소개</Link>
+                      <Link to="../product1">싱크대, 키친</Link>
                     </Grid>
-                    <Grid item xs={6}></Grid>
                     <Grid item xs={2} align="center">
-                      <Link to="../draft">상담 및 문의</Link>
+                      <Link to="../intro">회사 소개</Link>
                     </Grid>
-                    <Grid item xs={2}></Grid>
+                    <Grid item xs={4}></Grid>
+                    <Grid item xs={2} align="center">
+                      <Link to="../draft">상담 및 견적 문의</Link>
+                    </Grid>
+                    <Grid item xs={2} align="center"></Grid>
+                    <Grid item xs={2} align="center">
+                      <Link to="../product2">인테리어</Link>
+                    </Grid>
                     <Grid item xs={2} align="center">
                       <Link to="../map">오시는 길</Link>
                     </Grid>
-                    <Grid item xs={6}></Grid>
 
-                    <Grid item xs={12}></Grid>
-                    <Grid item xs={12}></Grid>
+                    <Grid item xs={4}></Grid>
+                    <Grid item xs={2} align="center"></Grid>
+                    <Grid item xs={2}></Grid>
+                    <Grid item xs={2} align="center">
+                      <Link to="../product3">기타 맞춤가구</Link>
+                    </Grid>
+                    <Grid item xs={6} align="center"></Grid>
+
                     <Grid item xs={12}></Grid>
                     <Grid item xs={12}></Grid>
                     <Grid item xs={12}></Grid>
@@ -74,40 +85,39 @@ class Dropdown extends Component {
               </div>
               <div>
                 <Grid container item className="dropdownsmall">
-                  <Grid item xs={3}></Grid>
-                  <Grid
-                    container
-                    item
-                    xs={9}
-                    spacing={0}
-                    direction="row-reverse"
-                  >
-                    <Grid item xs={12}></Grid>
-                    <Grid item xs={12}></Grid>
+                  <Grid item xs={12}></Grid>
 
-                    <Grid item xs={4} align="center">
-                      <Link to="../notice">공지사항</Link>
-                    </Grid>
-                    <Grid item xs={4} align="center">
-                      <Link to="../gallery">갤러리</Link>
-                    </Grid>
-                    <Grid item xs={4} align="center">
-                      <Link to="../intro">회사소개</Link>
-                    </Grid>
-                    <Grid item xs={12}></Grid>
-                    <Grid item xs={12}></Grid>
-
-                    <Grid item xs={4} align="center">
-                      <Link to="../draft">상담 및 문의</Link>
-                    </Grid>
-                    <Grid item xs={4}></Grid>
-                    <Grid item xs={4} align="center">
-                      <Link to="../map">오시는 길</Link>
-                    </Grid>
-
-                    <Grid item xs={12}></Grid>
+                  <Grid item xs={4} align="center">
+                    <Link to="../notice">공지사항</Link>
                   </Grid>
-                  <Grid />
+                  <Grid item xs={4} align="center">
+                    <Link to="../intro">회사 소개</Link>
+                  </Grid>
+                  <Grid item xs={4} align="center">
+                    <Link to="../map">오시는 길</Link>
+                  </Grid>
+
+                  <Grid item xs={12}></Grid>
+                  <Grid item xs={4} align="center">
+                    <Link to="../product1">싱크대, 키친</Link>
+                  </Grid>
+
+                  <Grid item xs={4} align="center">
+                    <Link to="../product2">인테리어</Link>
+                  </Grid>
+                  <Grid item xs={4} align="center">
+                    <Link to="../product3">기타 맞춤가구</Link>
+                  </Grid>
+
+                  <Grid item xs={12}></Grid>
+
+                  <Grid item xs={4} align="center">
+                    <Link to="../example">실제 시공 사례</Link>
+                  </Grid>
+
+                  <Grid item xs={4} align="center">
+                    <Link to="../draft">상담 및 견적 문의</Link>
+                  </Grid>
                 </Grid>
               </div>
             </div>

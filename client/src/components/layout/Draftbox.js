@@ -36,7 +36,7 @@ class Draftbox extends Component {
                     <Link to="./notice">공지사항</Link>
                   </Grid>
                   <Grid item xs={12} align="center">
-                    <Link to="./draft">상담 및 문의</Link>
+                    <Link to="./draft">상담 및 견적 문의</Link>
                   </Grid>
                 </Grid>
               </Grid>
