@@ -6,16 +6,16 @@ class Postpiecemain extends Component {
   render() {
     return (
       <Grid container item className="postpiecepiece" xs={12}>
-        <Grid item xs={10} align="center">
+        <Grid item xs={9} align="center">
           <Link
             to={`./noticepost/${this.props.data._id}`}
             className="postpiece-main"
           >
-            {this.props.data.title}
+            <p>{this.props.data.title}</p>
           </Link>
         </Grid>
-        <Grid item xs={2} align="center">
-          {this.props.data.timestamp}
+        <Grid item xs={3} align="center">
+          <p>{this.props.data.timestamp}</p>
         </Grid>
       </Grid>
     );

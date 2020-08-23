@@ -27,7 +27,7 @@ exports.getPhoto = asyncHandler(async (req, res, next) => {
 });
 
 exports.deletePhoto = asyncHandler(async (req, res, next) => {
-  const photo = await Photo.deleteOne({ path: req.params.id });
+  const photo = await Photo.deleteOne({ _id: req.params.id });
 
   if (!photo) {
     return next(

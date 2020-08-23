@@ -69,7 +69,7 @@ class Navbar extends Component {
               <Grid item xs={8}></Grid>
               <Grid item xs={1} align="center">
                 <p>
-                  <i class="fas fa-bars"></i>
+                  <i className="fas fa-bars"></i>
                 </p>
               </Grid>
             </Grid>

@@ -39,7 +39,7 @@ class Manage4 extends Component {
                 if (error.response.status === 403) {
                   swal('로그인 해주세요');
                 } else if (error.response) {
-                  swal('사진 id를 확인해주세요');
+                  swal('공지 id를 확인해주세요');
                 }
               });
 

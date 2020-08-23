@@ -37,9 +37,12 @@
     "react-alert": "^7.0.2",
     "react-alert-template-basic": "^1.0.0",
     "react-confirm-alert": "^2.6.1",
+    "react-elastic-carousel": "^0.7.3",
     "react-image-gallery": "^1.0.8",
     "react-naver-maps": "0.0.13",
+    "reactjs-popup": "^1.5.0",
     "slugify": "^1.4.5",
+    "styled-components": "^5.1.1",
     "sweetalert": "^2.1.2"
   },
   "devDependencies": {

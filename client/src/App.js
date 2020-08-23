@@ -19,6 +19,7 @@ import Example from './components/Example';
 import Law1 from './components/Law1';
 import Law2 from './components/Law2';
 import Law3 from './components/Law3';
+
 class App extends Component {
   render() {
     return (

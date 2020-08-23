@@ -112,7 +112,9 @@ class Manage2 extends Component {
         />
 
         <textarea
-          placeholder="설명"
+          placeholder="공사 금액 : 12,000,000
+          공사 기간 : 2주
+          공사 구분 : 28평형 아파트 행 구분해서 입력!"
           value={this.state.desc}
           onChange={this.handleChange}
           id="desc"

@@ -36,7 +36,7 @@ class Productpiece extends Component {
         </Hidden>
         <Hidden mdUp>
           <Grid container item xs={12} className="productpiecesmall">
-            <Grid item xs={8} align="center">
+            <Grid item xs={12} align="center">
               <Link to={`../Imgslide/${this.props.data._id}`}>
                 <img
                   src={`./uploads/${this.props.data.path[0]}`}
@@ -47,7 +47,7 @@ class Productpiece extends Component {
                 ></img>
               </Link>
             </Grid>
-            <Grid container item xs={4}>
+            <Grid container item xs={12}>
               <Link to={`../Imgslide/${this.props.data._id}`}>
                 <div className="productbigbox">
                   <Grid item xs={12} className="productdesc">

@@ -29,6 +29,7 @@ class Manage5 extends Component {
         {
           label: '네',
           onClick: () => {
+            console.log(this.state.photoid);
             axios
               .delete(`/api/v1/photos/${this.state.photoid}`)
               .then((res) => {
