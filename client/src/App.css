@@ -988,11 +988,6 @@ ul {
   background-color: gray;
   box-shadow: none;
 }
-.rec-carousel-wrapper .rec-dot_active {
-  background-color: white;
-  border-color: white;
-  box-shadow: gray;
-}
 .rec-carousel-wrapper .hlYYDB {
   box-shadow: none;
 }
@@ -1000,10 +995,32 @@ ul {
   display: none;
 }
 
-.rec-carousel-wrapper .rec-pagination {
+.rec-carousel-wrapper .oWWim {
   background-color: white;
+  border: none;
+  box-shadow: none;
 }
 
+.rec-carousel-wrapper .oUxiw {
+  background-color: white;
+  border: none;
+  box-shadow: none;
+}
+
+.rec-carousel-wrapper .oUxiw:hover:enabled {
+  background-color: gray;
+  box-shadow: none;
+}
+.rec-carousel-wrapper .oUxiw:focus:enabled {
+  background-color: gray;
+  box-shadow: none;
+}
+.rec-carousel-wrapper .kbDIuN {
+  display: none;
+}
+.rec-carousel-wrapper .hXQwGq {
+  display: none;
+}
 .borderline {
   border-bottom: gray 0.02vw solid;
   padding-left: 3vw;
