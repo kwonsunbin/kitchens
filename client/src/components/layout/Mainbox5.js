@@ -44,7 +44,7 @@ class Mainbox4 extends Component {
               <Grid item xs={1}></Grid>
               <Grid container item xs={10}>
                 <Grid item xs={12} align="center">
-                  <h1>CS Center</h1>
+                  <h1>AS 요청 및 전화 문의</h1>
                 </Grid>
                 <Grid item xs={6} align="end">
                   <h1>053-766-1234 | </h1>
@@ -127,7 +127,7 @@ class Mainbox4 extends Component {
             <Grid container item xs={12}>
               <Grid container item xs={12}>
                 <Grid item xs={12} align="center">
-                  <h1>CS Center</h1>
+                  <h1>AS 요청 및 전화 문의</h1>
                 </Grid>
                 <Grid item xs={6} align="end">
                   <h2>053-766-1234 </h2>
