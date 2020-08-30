@@ -3,6 +3,7 @@ import Productbox3 from './layout/Productbox3';
 
 import Navbar from './layout/Navbar';
 import Footer from './layout/Footer';
+import Fixedad from './Fixedad';
 
 const Product3 = () => {
   return (
@@ -14,6 +15,7 @@ const Product3 = () => {
         </Fragment>
       </div>
       <Footer></Footer>
+      <Fixedad></Fixedad>
     </Fragment>
   );
 };

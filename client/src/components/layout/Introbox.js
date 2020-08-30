@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import Grid from '@material-ui/core/Grid';
 import Hidden from '@material-ui/core/Hidden';
 
@@ -9,25 +9,24 @@ const Introbox = () => {
       <Hidden smDown>
         <Fragment>
           <Grid container className="pagebox">
-            <Grid
-              container
-              item
-              xs={2}
-              justify="center"
-              className="navbar-column"
-            >
-              <Grid container item xs={12} direction="column" align="center">
-                <h2>회사 소개</h2>
-                <Grid align="center">
-                  <Link to="./intro">회사 소개</Link>
-                </Grid>
-                <Grid align="center">
-                  <Link to="./map">오시는 길</Link>
-                </Grid>
+            <Grid container className="forbg">
+              <Grid item xs={1}></Grid>
+              <Grid item xs={10} align="center">
+                <h1>회사 소개</h1>
               </Grid>
-            </Grid>
+              <Grid item xs={1}></Grid>
 
-            <Grid container item xs={10} className="introbox">
+              <Grid item xs={1}></Grid>
+
+              <Grid item xs={10} align="center">
+                <p>키친스를 소개합니다.</p>
+                <p>&nbsp;</p>
+              </Grid>
+              <Grid item xs={1}></Grid>
+            </Grid>
+            <Grid item xs={2}></Grid>
+
+            <Grid container item xs={8} className="introbox">
               <Grid item xs={12}>
                 <img src="./intro.jpg" alt="intro" width="100%" />
               </Grid>
@@ -51,12 +50,28 @@ const Introbox = () => {
                 </p>
               </Grid>
             </Grid>
+            <Grid item xs={2}></Grid>
           </Grid>
         </Fragment>
       </Hidden>
       <Hidden mdUp>
         <Fragment>
           <Grid container className="pageboxsmall">
+            <Grid container className="forbg">
+              <Grid item xs={1}></Grid>
+              <Grid item xs={10} align="center">
+                <h1>회사 소개</h1>
+              </Grid>
+              <Grid item xs={1}></Grid>
+
+              <Grid item xs={1}></Grid>
+
+              <Grid item xs={10} align="center">
+                <p>키친스를 소개합니다.</p>
+                <p>&nbsp;</p>
+              </Grid>
+              <Grid item xs={1}></Grid>
+            </Grid>
             <Grid container item xs={12} className="introbox">
               <Grid item xs={12}>
                 <img src="./intro.jpg" alt="intro" width="100%" />

@@ -3,6 +3,7 @@ import Introbox from './layout/Introbox';
 
 import Navbar from './layout/Navbar';
 import Footer from './layout/Footer';
+import Fixedad from './Fixedad';
 
 const intro = () => {
   return (
@@ -14,6 +15,7 @@ const intro = () => {
         </Fragment>
       </div>
       <Footer></Footer>
+      <Fixedad></Fixedad>
     </Fragment>
   );
 };

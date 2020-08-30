@@ -8,6 +8,7 @@ import Mainbox7 from './layout/Mainbox7';
 import Navbar from './layout/Navbar';
 import Footer from './layout/Footer';
 import Modal from './Modal';
+import Fixedad from './Fixedad';
 
 class Main extends Component {
   constructor(props) {
@@ -50,6 +51,7 @@ class Main extends Component {
           <Mainbox5 />
         </div>
         <Footer></Footer>
+        <Fixedad></Fixedad>
       </Fragment>
     );
   }

@@ -23,9 +23,6 @@ class Mainbox4 extends Component {
       <Fragment>
         <Hidden smDown>
           <Grid container>
-            <Grid item xs={12}>
-              &nbsp;
-            </Grid>
             <Grid container item xs={5} alignItems="center">
               <Grid item xs={12} className="noticeborder">
                 <div></div>
@@ -40,74 +37,61 @@ class Mainbox4 extends Component {
               </Grid>
             </Grid>
             <Grid item xs={1}></Grid>
-            <Grid container item xs={6}>
-              <Grid item xs={1}></Grid>
-              <Grid container item xs={10}>
-                <Grid item xs={12} align="center">
-                  <h1>AS 요청 및 전화 문의</h1>
-                </Grid>
-                <Grid item xs={6} align="end">
-                  <h1>053-766-1234 | </h1>
-                </Grid>
-                <Grid item xs={6}>
-                  <h2>
-                    &nbsp;평일 09:00~18:00<br></br>&nbsp;(주말/공휴일 휴뮤)
-                  </h2>
-                </Grid>
-                <Grid container item xs={4} align="center">
-                  <Grid container item className="mainbutton" justify="center">
-                    <Link to="./map">
-                      <Grid item xs={12} align="center">
-                        <h2>
-                          <i className="fas fa-building"></i>
-                        </h2>
-                      </Grid>
-                      <Grid item xs={12} align="center">
-                        <h2>회사소개</h2>
-                      </Grid>
-                    </Link>
+            <Grid container item xs={6} spaicing={3}>
+              <Grid item xs={3}></Grid>
+              <Grid item container xs={3} className="hib">
+                <Link to="./notice">
+                  <Grid container>
+                    <Grid item xs={12} align="center" className="hibyeh">
+                      공지 사항
+                    </Grid>
+                    <Grid>&nbsp;</Grid>
+                    <Grid item xs={12} align="center">
+                      <i className="far fa-bell"></i>
+                    </Grid>
                   </Grid>
-                </Grid>
-
-                <Grid container item xs={4} align="center">
-                  <Grid container item className="mainbutton" justify="center">
-                    <Link to="./intro">
-                      <Grid item xs={12} align="center">
-                        <h2>
-                          <i className="fas fa-question"></i>
-                        </h2>
-                      </Grid>
-                      <Grid item xs={12} align="center">
-                        <h2>온라인 상담 및 문의</h2>
-                      </Grid>
-                    </Link>
-                  </Grid>
-                </Grid>
-                <Grid container item xs={4} align="center">
-                  <Grid container item className="mainbutton" justify="center">
-                    <Link to="./map">
-                      <Grid item xs={12} align="center">
-                        <h2>
-                          <i className="fas fa-map-marker-alt"></i>
-                        </h2>
-                      </Grid>
-                      <Grid item xs={12} align="center">
-                        <h2>오시는 길</h2>
-                      </Grid>
-                    </Link>
-                  </Grid>
-                </Grid>
+                </Link>
               </Grid>
-              <Grid item xs={1}></Grid>
+              <Grid container item xs={3} className="hib">
+                <Link to="./map">
+                  <Grid container>
+                    <Grid item xs={12} align="center" className="hibyeh">
+                      오시는 길
+                    </Grid>
+                    <Grid>&nbsp;</Grid>
+
+                    <Grid item xs={12} align="center">
+                      <i className="fas fa-map-marker-alt"></i>
+                    </Grid>
+                  </Grid>
+                </Link>
+              </Grid>
+
+              <Grid item container xs={3} className="hib">
+                <Link to="./intro">
+                  <Grid container>
+                    <Grid item xs={12} align="center" className="hibyeh">
+                      회사 소개
+                    </Grid>
+                    <Grid>&nbsp;</Grid>
+                    <Grid item xs={12} align="center">
+                      <i className="fas fa-building"></i>
+                    </Grid>
+                  </Grid>
+                </Link>
+              </Grid>
             </Grid>
           </Grid>
         </Hidden>
         <Hidden mdUp>
-          <Grid container className="main5small">
-            <Grid item xs={12}>
-              &nbsp;
-            </Grid>
-            <Grid container item xs={12} alignItems="center">
+          <Grid container>
+            <Grid
+              container
+              item
+              xs={12}
+              alignItems="center"
+              className="mainbox5small"
+            >
               <Grid item xs={12} className="noticeborder">
                 <div></div>
               </Grid>
@@ -119,68 +103,60 @@ class Mainbox4 extends Component {
               <Grid container item xs={9}>
                 {list}
               </Grid>
+              <Grid itemx xs={12}>
+                &nbsp;
+              </Grid>
+              <Grid itemx xs={12}>
+                &nbsp;
+              </Grid>
             </Grid>
-            <Grid item xs={12}></Grid>
-            <Grid item xs={12}>
-              <p>&nbsp;</p>
-            </Grid>
-            <Grid container item xs={12}>
-              <Grid container item xs={12}>
-                <Grid item xs={12} align="center">
-                  <h1>AS 요청 및 전화 문의</h1>
-                </Grid>
-                <Grid item xs={6} align="end">
-                  <h2>053-766-1234 </h2>
-                </Grid>
-                <Grid item xs={6}>
-                  <p>
-                    &nbsp;|&nbsp;평일 09:00~18:00<br></br>
-                    &nbsp;&nbsp;(주말/공휴일 휴뮤)
-                  </p>
-                </Grid>
-                <Grid container item xs={4} align="center">
-                  <Grid container item className="mainbutton" justify="center">
-                    <Link to="./map">
-                      <Grid item xs={12} align="center">
-                        <h2>
-                          <i className="fas fa-building"></i>
-                        </h2>
-                      </Grid>
-                      <Grid item xs={12} align="center">
-                        <h2>회사소개</h2>
-                      </Grid>
-                    </Link>
+            <Grid
+              container
+              item
+              xs={12}
+              spaicing={3}
+              className="mainbox5small2"
+            >
+              <Grid item container xs={4} align="center" className="hibsmall">
+                <Link to="./notice">
+                  <Grid container>
+                    <Grid item xs={12} align="center" className="hibyehsmall">
+                      공지 사항
+                    </Grid>
+                    <Grid>&nbsp;</Grid>
+                    <Grid item xs={12} align="center">
+                      <i class="fas fa-bullhorn"></i>
+                    </Grid>
                   </Grid>
-                </Grid>
+                </Link>
+              </Grid>
+              <Grid container item xs={4} align="center" className="hibsmall">
+                <Link to="./map">
+                  <Grid container>
+                    <Grid item xs={12} align="center" className="hibyehsmall">
+                      오시는 길
+                    </Grid>
+                    <Grid>&nbsp;</Grid>
 
-                <Grid container item xs={4} align="center">
-                  <Grid container item className="mainbutton" justify="center">
-                    <Link to="./intro">
-                      <Grid item xs={12} align="center">
-                        <h2>
-                          <i className="fas fa-question"></i>
-                        </h2>
-                      </Grid>
-                      <Grid item xs={12} align="center">
-                        <h3>온라인 상담 및 문의</h3>
-                      </Grid>
-                    </Link>
+                    <Grid item xs={12} align="center">
+                      <i class="fas fa-map-signs"></i>{' '}
+                    </Grid>
                   </Grid>
-                </Grid>
-                <Grid container item xs={4} align="center">
-                  <Grid container item className="mainbutton" justify="center">
-                    <Link to="./map">
-                      <Grid item xs={12} align="center">
-                        <h2>
-                          <i className="fas fa-map-marker-alt"></i>
-                        </h2>
-                      </Grid>
-                      <Grid item xs={12} align="center">
-                        <h2>오시는 길</h2>
-                      </Grid>
-                    </Link>
+                </Link>
+              </Grid>
+
+              <Grid item container xs={4} align="center" className="hibsmall">
+                <Link to="./intro">
+                  <Grid container>
+                    <Grid item xs={12} align="center" className="hibyehsmall">
+                      회사 소개
+                    </Grid>
+                    <Grid>&nbsp;</Grid>
+                    <Grid item xs={12} align="center">
+                      <i class="fas fa-store"></i>
+                    </Grid>
                   </Grid>
-                </Grid>
+                </Link>
               </Grid>
             </Grid>
           </Grid>

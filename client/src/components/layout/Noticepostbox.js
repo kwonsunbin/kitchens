@@ -9,17 +9,23 @@ class Noticepostbox extends Component {
       <Fragment>
         <Hidden smDown>
           <Grid container className="noticepostboxtop">
-            <Grid container item xs={2} align="center">
-              <Grid item xs={12} align="center">
-                <h2>고객지원</h2>
-                <Link to="./notice">
-                  공지사항<br></br>
-                </Link>
-                <Link to="./draft">상담 및 문의</Link>
+            <Grid container className="forbg">
+              <Grid item xs={1}></Grid>
+              <Grid item xs={10} align="center">
+                <h1>공지 사항</h1>
               </Grid>
-            </Grid>
+              <Grid item xs={1}></Grid>
 
-            <Grid container item xs={10} className="noticepbox">
+              <Grid item xs={1}></Grid>
+
+              <Grid item xs={10} align="center">
+                <p>키친스의 공지사항 게시판입니다.</p>
+                <p>&nbsp;</p>
+              </Grid>
+              <Grid item xs={1}></Grid>
+            </Grid>
+            <Grid item xs={2}></Grid>
+            <Grid container item xs={8} className="noticepbox">
               <Grid item xs={2} className="tblidx">
                 <div className="idx">제목</div>
               </Grid>
@@ -41,19 +47,37 @@ class Noticepostbox extends Component {
               <Grid item xs={2} className="tblidx">
                 <div className="idx">내용</div>
               </Grid>
-              <Grid item xs={10} className="tblc">
+              <Grid item xs={10} className="tblccontent">
                 <div>{this.props.content.content}</div>
               </Grid>
             </Grid>
-            <Grid item xs={12}>
-              <Link to="../notice" id="noticebacklink">
-                목록으로
+            <Grid item xs={2}></Grid>
+            <Grid item xs={9}></Grid>
+            <Grid item xs={1} align="center">
+              <Link to="../notice">
+                <div className="consultbutton3">목록</div>
               </Link>
             </Grid>
+            <Grid item xs={2}></Grid>
           </Grid>
         </Hidden>
         <Hidden mdUp>
           <Grid container className="noticepostboxtopsmall">
+            <Grid container className="forbgsmall">
+              <Grid item xs={1}></Grid>
+              <Grid item xs={10} align="center">
+                <h1>공지 사항</h1>
+              </Grid>
+              <Grid item xs={1}></Grid>
+
+              <Grid item xs={1}></Grid>
+
+              <Grid item xs={10} align="center">
+                <p>키친스의 공지사항 게시판입니다.</p>
+                <p>&nbsp;</p>
+              </Grid>
+              <Grid item xs={1}></Grid>
+            </Grid>
             <Grid container item xs={12} className="noticepbox">
               <Grid item xs={2} className="tblidx">
                 <div className="idx">제목</div>
@@ -80,9 +104,10 @@ class Noticepostbox extends Component {
                 <div>{this.props.content.content}</div>
               </Grid>
             </Grid>
-            <Grid item xs={12}>
-              <Link to="../notice" id="noticebacklink">
-                목록으로
+            <Grid item xs={10}></Grid>
+            <Grid item xs={2} align="center">
+              <Link to="../notice">
+                <div className="consultbutton3small">목록</div>
               </Link>
             </Grid>
           </Grid>

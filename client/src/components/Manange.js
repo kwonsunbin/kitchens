@@ -4,8 +4,10 @@ import Manage2 from './layout/Manage2';
 import Manage3 from './layout/Manage3';
 import Manage4 from './layout/Manage4';
 import Manage5 from './layout/Manage5.js';
+import Manage6 from './layout/Manage6.js';
 import Grid from '@material-ui/core/Grid';
 import swal from 'sweetalert';
+import { Link } from 'react-router-dom';
 
 import axios from 'axios';
 
@@ -69,8 +71,11 @@ class Manage extends Component {
             <Manage2 onCreate={this.handleCreatePhoto} />
             <h1>제품 소개, 시공 사례 지우기</h1>
             <Manage5 />
-            <h1>상담 및 문의 확인</h1>
-            <Manage3 />
+            <h1>상담 및 문의 답변</h1>
+            <Manage6 />
+            <Link to="../" className="endbottom">
+              <h1>메인으로</h1>
+            </Link>
           </div>
         </Grid>
       </div>

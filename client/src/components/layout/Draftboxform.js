@@ -8,11 +8,9 @@ class Draftboxform extends Component {
     super(props);
     this.state = {
       authorName: '',
-      phone: '',
-      email: '',
+      password: '',
       title: '',
       content: '',
-      agreement: '',
     };
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -34,12 +32,9 @@ class Draftboxform extends Component {
             this.props.onCreate(this.state);
 
             this.setState({
-              authorName: '',
-              phone: '',
-              email: '',
               title: '',
               content: '',
-              agreement: '',
+              password: '',
             });
           },
         },
@@ -55,8 +50,8 @@ class Draftboxform extends Component {
 
   render() {
     return (
-      <Grid container item xs={9}>
-        <form onSubmit={this.handleSubmit}>
+      <Grid item container xs={12}>
+        <form onSubmit={this.handleSubmit} className="fullform">
           <Grid item className="h2box" xs={12}>
             <h2 className="tkdeka">상담 및 견적 문의</h2>
           </Grid>
@@ -64,70 +59,41 @@ class Draftboxform extends Component {
           <Grid item xs={12}>
             <input
               className="fullform"
-              placeholder="성함"
+              placeholder="제목"
+              value={this.state.title}
+              onChange={this.handleChange}
+              id="title"
+            />
+          </Grid>
+          <Grid item xs={12}>
+            <input
+              className="fullform"
+              placeholder="작성자"
               value={this.state.authorName}
               onChange={this.handleChange}
               id="authorName"
             />
           </Grid>
-
           <Grid item xs={12}>
             <input
               className="fullform"
-              placeholder="연락처"
-              value={this.state.phone}
+              placeholder="비밀번호"
+              value={this.state.password}
               onChange={this.handleChange}
-              id="phone"
-            />
-          </Grid>
-
-          <Grid item xs={12}>
-            <input
-              className="fullform"
-              placeholder="이메일"
-              value={this.state.email}
-              onChange={this.handleChange}
-              id="email"
-            />
-          </Grid>
-
-          <Grid item xs={12}>
-            <input
-              className="fullform"
-              placeholder="시공할 자택 주소 혹은 아파트 이름"
-              value={this.state.title}
-              onChange={this.handleChange}
-              id="title"
+              id="password"
             />
           </Grid>
 
           <Grid item xs={12}>
             <textarea
               className="ansdmlsodyd"
-              placeholder="시공할 가구 (싱크대/붙박이장/신발장/시스템장/기타 맞춤가구 등)"
+              placeholder="1. 성함 2. 연락처 3. 문의 내용 양식으로 작성 부탁드립니다"
               value={this.state.content}
               onChange={this.handleChange}
               id="content"
             />
           </Grid>
 
-          <Grid item xs={12}>
-            키친스는 고객의 개인정보를 아래와 같은 목적으로 수집·이용합니다.
-            회사는 고객으로 부터 제공 받은 개인정보를 아래의 목적 이외로는
-            사용하지 않으며, 만약 이용 목적을 변경하거나 이용 목적 범위를
-            초과하여 이용하고자 할 때에는 고객으로부터 별도로 사전 동의를 얻을
-            것입니다. 문의에 따른 답변 전달의 용도 및 기타 고객의 요구에 따른
-            안내 사항 고지, 등 각 업체의 상황에 맞게 개인정보 수집·이용의 모든
-            내용 작성과 같은 목적으로 수집·이용합니다. 회사는 이용자의
-            개인정보를 원칙적으로 개인정보의 수집 및 이용목적이 달성되면
-            지체없이 파기됩니다.
-          </Grid>
-          <Grid container>
-            <Grid item xs={12} align="end">
-              동의합니다
-              <input type="checkbox" onChange={this.handleChange} />
-            </Grid>
-          </Grid>
           <Grid item xs={12} className="fullform">
             <button className="fullform" type="submit">
               작성하기

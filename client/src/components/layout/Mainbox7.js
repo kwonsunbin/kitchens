@@ -30,9 +30,13 @@ class Mainbox7 extends Component {
               <h1>실제 시공 사례</h1>
               <p>키친스가 직접 시공한 결과물입니다.</p>
             </Grid>
-            <Grid item xs={12}>
-              &nbsp;
+            <Grid item xs={11}></Grid>
+            <Grid item xs={1}>
+              <Link to="./example" className="magni">
+                <i className="fas fa-search-plus"></i>&nbsp; 더보기
+              </Link>
             </Grid>
+            <Grid>&nbsp;</Grid>
 
             <Grid container item xs={12}>
               {this.state.examples.map((example) => (

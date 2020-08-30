@@ -1,5 +1,5 @@
 import React, { Component, Fragment } from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import axios from 'axios';
 import Postpiece from './Postpiece';
 import uuid from 'react-uuid';
@@ -61,18 +61,22 @@ class Noticebox extends Component {
       <Fragment>
         <Hidden smDown>
           <Grid container className="pagebox">
-            <Grid container item xs={2} direction="column">
-              <Grid item align="center">
-                <h2>고객지원</h2>
+            <Grid container className="forbg">
+              <Grid item xs={1}></Grid>
+              <Grid item xs={10} align="center">
+                <h1>공지 사항</h1>
               </Grid>
-              <Grid item align="center">
-                <Link to="./notice">공지사항</Link>
+              <Grid item xs={1}></Grid>
+
+              <Grid item xs={1}></Grid>
+
+              <Grid item xs={10} align="center">
+                <p>키친스의 공지사항 게시판입니다.</p>
+                <p>&nbsp;</p>
               </Grid>
-              <Grid item align="center">
-                <Link to="./draft">상담 및 문의</Link>
-              </Grid>
+              <Grid item xs={1}></Grid>
             </Grid>
-            <Grid item xs={1}></Grid>
+            <Grid item xs={2}></Grid>
             <Grid container item xs={8} className="postshowbox">
               <Grid item xs={12}>
                 <h1>공지 게시판</h1>
@@ -95,16 +99,16 @@ class Noticebox extends Component {
               {list}
 
               <Grid container item xs={12} className="pagination-notice">
+                <Grid item xs={12}>
+                  &nbsp;
+                </Grid>
                 <Grid item xs={4}></Grid>
                 <Grid item xs={1}>
-                  <Box
-                    display="flex"
-                    alignItems="center"
-                    justifyContent="center"
-                  >
-                    <p onClick={this.handleDecrease}> 이전 </p>
-                  </Box>
+                  <div className="consultbutton3" onClick={this.handleDecrease}>
+                    이전
+                  </div>
                 </Grid>
+
                 <Grid item xs={2} align="center">
                   <p>
                     {this.state.page} &nbsp;/ &nbsp;{this.state.total}
@@ -112,15 +116,33 @@ class Noticebox extends Component {
                 </Grid>
 
                 <Grid item xs={1} align="center">
-                  <p onClick={this.handleIncrease}> 다음 </p>
+                  <div className="consultbutton3" onClick={this.handleIncrease}>
+                    다음
+                  </div>
                 </Grid>
               </Grid>
               <Grid item xs={4}></Grid>
             </Grid>
+            <Grid item xs={2}></Grid>
           </Grid>
         </Hidden>
         <Hidden mdUp>
           <Grid container className="pageboxsmall">
+            <Grid container className="forbg">
+              <Grid item xs={1}></Grid>
+              <Grid item xs={10} align="center">
+                <h1>공지 사항</h1>
+              </Grid>
+              <Grid item xs={1}></Grid>
+
+              <Grid item xs={1}></Grid>
+
+              <Grid item xs={10} align="center">
+                <p>키친스의 공지사항 게시판입니다.</p>
+                <p>&nbsp;</p>
+              </Grid>
+              <Grid item xs={1}></Grid>
+            </Grid>
             <Grid container item xs={12} className="postshowboxsmall">
               <Grid item xs={12}>
                 <h1>공지 게시판</h1>
@@ -143,15 +165,17 @@ class Noticebox extends Component {
               {list}
 
               <Grid container item xs={12} className="pagination-notice">
-                <Grid item xs={4}></Grid>
-                <Grid item xs={1}>
-                  <Box
-                    display="flex"
-                    alignItems="center"
-                    justifyContent="center"
+                <Grid item xs={12}>
+                  &nbsp;
+                </Grid>
+                <Grid item xs={3}></Grid>
+                <Grid item xs={2}>
+                  <div
+                    className="consultbutton3small"
+                    onClick={this.handleDecrease}
                   >
-                    <p onClick={this.handleDecrease}> 이전 </p>
-                  </Box>
+                    이전
+                  </div>
                 </Grid>
                 <Grid item xs={2} align="center">
                   <p>
@@ -159,11 +183,16 @@ class Noticebox extends Component {
                   </p>
                 </Grid>
 
-                <Grid item xs={1} align="center">
-                  <p onClick={this.handleIncrease}> 다음 </p>
+                <Grid item xs={2} align="center">
+                  <div
+                    className="consultbutton3small"
+                    onClick={this.handleIncrease}
+                  >
+                    다음
+                  </div>
                 </Grid>
               </Grid>
-              <Grid item xs={4}></Grid>
+              <Grid item xs={3}></Grid>
             </Grid>
           </Grid>
         </Hidden>

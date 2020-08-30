@@ -3,6 +3,7 @@ import Draftbox from './layout/Draftbox';
 import axios from 'axios';
 import Navbar from './layout/Navbar';
 import Footer from './layout/Footer';
+import swal from 'sweetalert';
 
 class Draft extends Component {
   constructor(props) {
@@ -18,14 +19,14 @@ class Draft extends Component {
     })
       .then((res) => {
         if (res.status === 201) {
-          alert('등록되었습니다');
+          swal('등록되었습니다');
         }
       })
       .catch(function (error) {
         if (error.response) {
-          alert('모든 항목을 채워주세요');
+          swal('모든 항목을 채워주세요');
         } else {
-          alert('에러!');
+          swal('에러!');
         }
       });
   }

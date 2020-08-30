@@ -58,7 +58,7 @@ class Mainbox6 extends Component {
             <Grid item xs={12}>
               &nbsp;
             </Grid>
-            <Grid item xs={3} align="center">
+            <Grid item xs={3} align="center" className="magni2">
               <Link to="./product1">
                 <h2>키친, 싱크대</h2>
                 <p>
@@ -102,7 +102,7 @@ class Mainbox6 extends Component {
             <Grid item xs={12}>
               &nbsp;
             </Grid>
-            <Grid item xs={3} align="center">
+            <Grid item xs={3} align="center" className="magni2">
               <Link to="./product2">
                 <h2>인테리어</h2>
                 <p>
@@ -145,7 +145,7 @@ class Mainbox6 extends Component {
             <Grid item xs={12}>
               &nbsp;
             </Grid>
-            <Grid item xs={3} align="center">
+            <Grid item xs={3} align="center" className="magni2">
               <Link to="./product3">
                 <h2 className="m0">주문제작가구</h2>
                 <p>
@@ -205,16 +205,16 @@ class Mainbox6 extends Component {
             <Grid item xs={12}>
               &nbsp;
             </Grid>
-            <Grid item xs={2} align="center">
+            <Grid item xs={3} align="center" className="magni2small">
               <Link to="./product1">
-                <h3>키친</h3>
+                <h2>키친, 싱크대</h2>
                 <p>
                   <i className="fas fa-search-plus"></i>
                   더보기
                 </p>
               </Link>
             </Grid>
-            <Grid item xs={10}>
+            <Grid item xs={9}>
               <Carousel breakPoints={breakPoints}>
                 {this.state.product1.map((product) => (
                   <Link
@@ -222,13 +222,15 @@ class Mainbox6 extends Component {
                     className="linkimage"
                     key={uuid()}
                   >
-                    <div className="slideboxsmall">
+                    <div className="slidebox">
                       <img
                         src={`./uploads/${product.path[0]}`}
                         alt="photos"
                         width="100%"
                         height="100%"
+                        padding="0.2vw"
                       ></img>
+
                       <div className="babo">{product.title}</div>
                     </div>
                   </Link>
@@ -247,16 +249,16 @@ class Mainbox6 extends Component {
             <Grid item xs={12}>
               &nbsp;
             </Grid>
-            <Grid item xs={2} align="center">
+            <Grid item xs={3} align="center" className="magni2small">
               <Link to="./product2">
-                <h3>인테리어</h3>
+                <h2>인테리어</h2>
                 <p>
                   <i className="fas fa-search-plus"></i>
                   더보기
                 </p>
               </Link>
             </Grid>
-            <Grid item xs={10}>
+            <Grid item xs={9}>
               <Carousel breakPoints={breakPoints}>
                 {this.state.product2.map((product) => (
                   <Link
@@ -264,13 +266,14 @@ class Mainbox6 extends Component {
                     className="linkimage"
                     key={uuid()}
                   >
-                    <div className="slideboxsmall">
+                    <div className="slidebox">
                       <img
                         src={`./uploads/${product.path[0]}`}
                         alt="photos"
                         width="100%"
                         height="100%"
                       ></img>
+
                       <div className="babo">{product.title}</div>
                     </div>
                   </Link>
@@ -289,16 +292,16 @@ class Mainbox6 extends Component {
             <Grid item xs={12}>
               &nbsp;
             </Grid>
-            <Grid item xs={2} align="center">
+            <Grid item xs={3} align="center" className="magni2small">
               <Link to="./product3">
-                <h3 className="m0">제작가구</h3>
+                <h2 className="m0">주문제작가구</h2>
                 <p>
                   <i className="fas fa-search-plus"></i>
                   더보기
                 </p>
               </Link>
             </Grid>
-            <Grid item xs={10}>
+            <Grid item xs={9}>
               <Carousel breakPoints={breakPoints}>
                 {this.state.product3.map((product) => (
                   <Link
@@ -306,13 +309,14 @@ class Mainbox6 extends Component {
                     className="linkimage"
                     key={uuid()}
                   >
-                    <div className="slideboxsmall">
+                    <div className="slidebox">
                       <img
                         src={`./uploads/${product.path[0]}`}
                         alt="photos"
                         width="100%"
                         height="100%"
                       ></img>
+
                       <div className="babo">{product.title}</div>
                     </div>
                   </Link>

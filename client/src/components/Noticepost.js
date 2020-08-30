@@ -3,6 +3,7 @@ import Noticepostbox from './layout/Noticepostbox';
 import axios from 'axios';
 import Navbar from './layout/Navbar';
 import Footer from './layout/Footer';
+import Fixedad from './Fixedad';
 
 class Noticepost extends Component {
   constructor(props) {
@@ -39,6 +40,7 @@ class Noticepost extends Component {
           <Noticepostbox content={this.state.content} />
         </div>
         <Footer></Footer>
+        <Fixedad></Fixedad>
       </Fragment>
     );
   }

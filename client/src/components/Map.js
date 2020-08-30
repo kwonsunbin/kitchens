@@ -2,6 +2,7 @@ import React, { Fragment } from 'react';
 import Mapbox from './layout/Mapbox';
 import Navbar from './layout/Navbar';
 import Footer from './layout/Footer';
+import Fixedad from './Fixedad';
 
 const Map = () => {
   return (
@@ -11,6 +12,7 @@ const Map = () => {
         <Mapbox />
       </div>
       <Footer></Footer>
+      <Fixedad></Fixedad>
     </Fragment>
   );
 };

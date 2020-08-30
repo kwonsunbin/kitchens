@@ -19,6 +19,9 @@ import Example from './components/Example';
 import Law1 from './components/Law1';
 import Law2 from './components/Law2';
 import Law3 from './components/Law3';
+import Consult from './components/Consult';
+import Consultpost from './components/Consultpost';
+import Updatereq from './components/Updatereq';
 
 class App extends Component {
   render() {
@@ -42,6 +45,9 @@ class App extends Component {
             <Route exact path="/law1" component={Law1} />
             <Route exact path="/law2" component={Law2} />
             <Route exact path="/law3" component={Law3} />
+            <Route exact path="/consult" component={Consult} />
+            <Route exact path="/consultpost/:id" component={Consultpost} />
+            <Route exact path="/updatereq" component={Updatereq} />
             <Route component={Notfound} />
           </Switch>
         </Router>

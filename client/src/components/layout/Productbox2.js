@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from 'react';
 import Grid from '@material-ui/core/Grid';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import axios from 'axios';
 import Productpiece from './Productpiece';
 import uuid from 'uuid';
@@ -32,34 +32,86 @@ class Productbox2 extends Component {
       <Fragment>
         <Hidden smDown>
           <Grid container className="pagebox">
+            <Grid container className="forbg">
+              <Grid item xs={1}></Grid>
+              <Grid item xs={10} align="center">
+                <h1>제품 소개</h1>
+              </Grid>
+              <Grid item xs={1}></Grid>
+
+              <Grid item xs={1}></Grid>
+
+              <Grid item xs={10} align="center">
+                <p>키친스가 판매하는 제품들입니다.</p>
+                <p>&nbsp;</p>
+              </Grid>
+              <Grid item xs={1}></Grid>
+            </Grid>
+            <Grid item xs={1}></Grid>
             <Grid
               container
               item
-              xs={2}
+              xs={10}
               justify="center"
               className="navbar-column"
             >
-              <Grid container item xs={12} direction="column" align="center">
-                <h2>제품 소개</h2>
-                <Grid align="center">
-                  <Link to="./product1">키친, 싱크대</Link>
-                </Grid>
-                <Grid align="center">
-                  <Link to="./product2">인테리어</Link>
-                </Grid>
-                <Grid align="center">
-                  <Link to="./product3">주문 제작가구</Link>
-                </Grid>
+              <Grid item xs={4} align="center">
+                <NavLink
+                  to="./product1"
+                  activeClassName="active-link"
+                  className="navbutton"
+                >
+                  키친, 싱크대
+                </NavLink>
+              </Grid>
+              <Grid item xs={4} align="center">
+                <NavLink
+                  to="./product2"
+                  activeClassName="active-link"
+                  className="navbutton"
+                >
+                  인테리어
+                </NavLink>
+              </Grid>
+              <Grid item xs={4} align="center">
+                <NavLink
+                  to="./product3"
+                  activeClassName="active-link"
+                  className="navbutton"
+                >
+                  주문 제작가구
+                </NavLink>
+              </Grid>
+              <Grid item xs={12}>
+                &nbsp;
               </Grid>
             </Grid>
+            <Grid item xs={1}></Grid>
+            <Grid item xs={1}></Grid>
 
             <Grid container item xs={10}>
               {products}
             </Grid>
+            <Grid item xs={1}></Grid>
           </Grid>
         </Hidden>
         <Hidden mdUp>
           <Grid container className="pagebox">
+            <Grid container className="forbgsmall">
+              <Grid item xs={1}></Grid>
+              <Grid item xs={10} align="center">
+                <h1>제품 소개</h1>
+              </Grid>
+              <Grid item xs={1}></Grid>
+
+              <Grid item xs={1}></Grid>
+
+              <Grid item xs={10} align="center">
+                <p>키친스가 판매하는 제품들입니다.</p>
+                <p>&nbsp;</p>
+              </Grid>
+              <Grid item xs={1}></Grid>
+            </Grid>
             <Grid container item xs={12}>
               {products}
             </Grid>
