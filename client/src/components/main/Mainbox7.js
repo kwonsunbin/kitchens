@@ -44,7 +44,7 @@ class Mainbox7 extends Component {
                   <Link to={`./Imgslide/${example._id}`} className="linkimage">
                     <Grid item xs={12}>
                       <img
-                        src={`./uploads/${example.imgPaths[0]}`}
+                        src={`../uploads/${example.imgPaths[0]}`}
                         alt="photos"
                         width="90%"
                         height="90%"
@@ -83,7 +83,7 @@ class Mainbox7 extends Component {
                   <Link to={`./Imgslide/${example._id}`} className="linkimage">
                     <Grid item xs={12}>
                       <img
-                        src={`./uploads/${example.imgPaths[0]}`}
+                        src={`../uploads/${example.imgPaths[0]}`}
                         alt="photos"
                         width="90%"
                         height="90%"

@@ -90,7 +90,7 @@ class Mainbox6 extends Component {
                         >
                           <div className="slidebox">
                             <img
-                              src={`uploads/${product.imgPaths[0]}`}
+                              src={`../uploads/${product.imgPaths[0]}`}
                               alt="photos"
                               width="100%"
                               height="100%"
@@ -135,7 +135,7 @@ class Mainbox6 extends Component {
                         >
                           <div className="slidebox">
                             <img
-                              src={`./uploads/${product.imgPaths[0]}`}
+                              src={`../uploads/${product.imgPaths[0]}`}
                               alt="photos"
                               width="100%"
                               height="100%"
@@ -178,7 +178,7 @@ class Mainbox6 extends Component {
                         >
                           <div className="slidebox">
                             <img
-                              src={`./uploads/${product.imgPaths[0]}`}
+                              src={`../uploads/${product.imgPaths[0]}`}
                               alt="photos"
                               width="100%"
                               height="100%"
@@ -247,7 +247,7 @@ class Mainbox6 extends Component {
                     >
                       <div className="slidebox">
                         <img
-                          src={`./uploads/${product.imgPaths[0]}`}
+                          src={`../uploads/${product.imgPaths[0]}`}
                           alt="photos"
                           width="100%"
                           height="100%"
@@ -289,7 +289,7 @@ class Mainbox6 extends Component {
                     >
                       <div className="slidebox">
                         <img
-                          src={`./uploads/${product.imgPaths[0]}`}
+                          src={`../uploads/${product.imgPaths[0]}`}
                           alt="photos"
                           width="100%"
                           height="100%"
@@ -331,7 +331,7 @@ class Mainbox6 extends Component {
                     >
                       <div className="slidebox">
                         <img
-                          src={`./uploads/${product.imgPaths[0]}`}
+                          src={`../uploads/${product.imgPaths[0]}`}
                           alt="photos"
                           width="100%"
                           height="100%"
