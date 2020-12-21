@@ -31,7 +31,6 @@ const login = require('./routes/login');
 
 app.use(express.json());
 app.use(cors());
-app.use(express.static('publics'));
 app.set('jwt-secret', process.env.secret);
 app.use(cookieParser());
 
@@ -46,6 +45,8 @@ app.use('/api/v1/users', users);
 app.use('/api/v1/notices', notices);
 app.use('/api/v1/photos', photos);
 app.use('/api/v1/login', login);
+
+app.use(express.static('publics'));
 
 app.use(errorHandler);
 
