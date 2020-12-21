@@ -21,7 +21,6 @@ const app = express();
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
-app.use(express.static(path.join(__dirname, './public')));
 
 // Route files
 const requests = require('./routes/requests');
@@ -32,7 +31,7 @@ const login = require('./routes/login');
 
 app.use(express.json());
 app.use(cors());
-app.use(express.static(__dirname + '/public'));
+app.use(express.static('publics'));
 app.set('jwt-secret', process.env.secret);
 app.use(cookieParser());
 
