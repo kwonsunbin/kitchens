@@ -6,16 +6,11 @@ exports.login = (req, res, next) => {
   const { username, password } = req.body;
   const secret = req.app.get('jwt-secret');
 
-  // check the user info & generate the jwt
-  // check the user info & generate the jwt
   const check = (user) => {
     if (!user) {
-      // user does not exist
       throw new Error('login failed');
     } else {
-      // user exists, check the password
       if (user.verify(password)) {
-        // create a promise that generates jwt asynchronously
         const p = new Promise((resolve, reject) => {
           jwt.sign(
             {
@@ -41,13 +36,12 @@ exports.login = (req, res, next) => {
     }
   };
 
-  // respond the token
   const respond = (token) => {
     let options = {
       path: '/',
       sameSite: true,
-      maxAge: 1000 * 60 * 60 * 24, // would expire after 24 hours
-      httpOnly: true, // The cookie only accessible by the web server
+      maxAge: 1000 * 60 * 60 * 24,
+      httpOnly: true,
     };
     res.cookie('x-access-token', token, options);
     res.json({
@@ -56,15 +50,43 @@ exports.login = (req, res, next) => {
     });
   };
 
-  // error occured
   const onError = (error) => {
-    console.log('error');
+    console.log(error.message);
 
     res.status(403).json({
       message: error.message,
     });
   };
 
-  // find the user
   User.findOneByUsername(username).then(check).then(respond).catch(onError);
+};
+
+exports.checkLogin = (req, res, next) => {
+  const token = req.cookies['x-access-token'];
+
+  if (!token) {
+    return res.status(403).json({
+      success: false,
+      message: 'not logged in',
+    });
+  }
+
+  const p = new Promise((resolve, reject) => {
+    jwt.verify(token, req.app.get('jwt-secret'), (err, decoded) => {
+      if (err) reject(err);
+      resolve(decoded);
+    });
+  });
+
+  const onError = (error) => {
+    res.status(403).json({
+      success: false,
+      message: error.message,
+    });
+  };
+
+  p.then((decoded) => {
+    req.decoded = decoded;
+    res.status(200).json({ success: true });
+  }).catch(onError);
 };

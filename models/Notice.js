@@ -21,13 +21,16 @@ const NoticeSchema = new mongoose.Schema({
 
   content: {
     type: String,
-    required: [true, 'Add Comment'],
+    required: [true, 'Add Content'],
   },
   createdAt: {
     type: Date,
     default: Date.now,
   },
   timestamp: {
+    type: String,
+  },
+  imgPath: {
     type: String,
   },
 });

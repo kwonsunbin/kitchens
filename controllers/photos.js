@@ -1,9 +1,7 @@
 const ErrorResponse = require('../utils/errorResponse');
 const Photo = require('../models/Photo');
 const asyncHandler = require('../middleware/async');
-const path = require('path');
 const fs = require('fs');
-const upload = require('../server');
 
 exports.getPhotos = asyncHandler(async (req, res, next) => {
   res.status(200).json(res.advancedResults);
@@ -38,4 +36,25 @@ exports.deletePhoto = asyncHandler(async (req, res, next) => {
     );
   }
   res.status(200).json({ success: true, data: {} });
+});
+
+exports.createPhoto = asyncHandler(async (req, res, next) => {
+  const paths = req.files.map((f) => {
+    return f.filename;
+  });
+
+  const obj = {
+    title: req.body.title,
+    desc: req.body.desc,
+    kind: req.body.kind,
+    imgPaths: paths,
+  };
+
+  Photo.create(obj, (err, item) => {
+    if (err) {
+      console.log(err);
+    }
+  });
+
+  res.status(200).json({ success: true });
 });

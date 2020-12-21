@@ -1,5 +1,6 @@
 const express = require('express');
 const authMiddleware = require('../middleware/authMiddleware');
+const upload = require('../utils/upload');
 
 const {
   getNotice,
@@ -16,12 +17,12 @@ const advancedResults = require('../middleware/advancedResults');
 router
   .route('/')
   .get(advancedResults(Notice), getNotices)
-  .post(authMiddleware, createNotice);
+  .post(authMiddleware, upload.single('file'), createNotice);
 
 router
   .route('/:id')
   .get(getNotice)
-  .put(updateNotice)
+  .put(authMiddleware, upload.single('file'), updateNotice)
   .delete(authMiddleware, deleteNotice);
 
 module.exports = router;

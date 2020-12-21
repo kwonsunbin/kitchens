@@ -1,52 +1,99 @@
 import React, { Component } from 'react';
 import './App.css';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import Main from './components/Main';
-import Notice from './components/Notice';
-import Map from './components/Map';
-import Intro from './components/Intro';
-import Draft from './components/Draft';
-import Imgslide from './components/Imgslide';
-import Noticepost from './components/Noticepost';
-import Manage from './components/Manange';
-import Notfound from './components/Notfound';
-import Login from './components/Login';
+import Main from './containers/Main';
+import Notice from './containers/Notice';
+import Map from './containers/Map';
+import Intro from './containers/Intro';
+import Draft from './containers/Draft';
+import Imgslide from './containers/Imgslide';
+import Noticepost from './containers/Noticepost';
+import Notfound from './containers/Notfound';
+import Login from './containers/Login';
 import Container from '@material-ui/core/Container';
-import Product1 from './components/Product1';
-import Product2 from './components/Product2';
-import Product3 from './components/Product3';
-import Example from './components/Example';
-import Law1 from './components/Law1';
-import Law2 from './components/Law2';
-import Law3 from './components/Law3';
-import Consult from './components/Consult';
-import Consultpost from './components/Consultpost';
-import Updatereq from './components/Updatereq';
+import Product from './containers/Product';
+import Example from './containers/Example';
+import Law from './containers/Law';
+import Consult from './containers/Consult';
+import Consultpost from './containers/Consultpost';
+import Updatereq from './containers/Updatereq';
+import axios from 'axios';
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = { loggedIn: false };
+  }
+  componentDidMount() {
+    axios.get('/api/v1/login').then((res) => {
+      if (res.status === 200) {
+        this.setState({ loggedIn: true });
+      } else {
+        return;
+      }
+    });
+  }
+
   render() {
     return (
-      <Container maxWidth="lg" height="100%">
+      <Container maxWidth="xl" height="100%">
         <Router>
           <Switch>
-            <Route exact path="/" component={Main} />
-            <Route exact path="/notice" component={Notice} />
+            <Route
+              exact
+              path="/"
+              render={() => <Main isLoggedIn={this.state.loggedIn} />}
+            />
+            <Route
+              exact
+              path="/notice"
+              render={() => <Notice isLoggedIn={this.state.loggedIn} />}
+            />
             <Route exact path="/map" component={Map} />
             <Route exact path="/intro" component={Intro} />
             <Route exact path="/draft" component={Draft} />
-            <Route exact path="/noticepost/:id" component={Noticepost} />
-            <Route exact path="/Imgslide/:id" component={Imgslide} />
-            <Route exact path="/manage" component={Manage} />
+            <Route
+              exact
+              path="/noticepost/:id"
+              render={(props) => (
+                <Noticepost {...props} isLoggedIn={this.state.loggedIn} />
+              )}
+            />
+            <Route
+              exact
+              path="/Imgslide/:id"
+              render={(props) => (
+                <Imgslide {...props} isLoggedIn={this.state.loggedIn} />
+              )}
+            />
             <Route exact path="/login" component={Login} />
-            <Route exact path="/product1" component={Product1} />
-            <Route exact path="/product2" component={Product2} />
-            <Route exact path="/product3" component={Product3} />
-            <Route exact path="/example" component={Example} />
-            <Route exact path="/law1" component={Law1} />
-            <Route exact path="/law2" component={Law2} />
-            <Route exact path="/law3" component={Law3} />
-            <Route exact path="/consult" component={Consult} />
-            <Route exact path="/consultpost/:id" component={Consultpost} />
+            <Route
+              exact
+              path="/product/:id"
+              render={(props) => (
+                <Product {...props} isLoggedIn={this.state.loggedIn} />
+              )}
+            />
+            <Route
+              exact
+              path="/example"
+              render={() => <Example isLoggedIn={this.state.loggedIn} />}
+            />
+            <Route exact path="/law/:id" component={Law} />
+            <Route
+              exact
+              path="/consult"
+              render={(props) => (
+                <Consult {...props} isLoggedIn={this.state.loggedIn} />
+              )}
+            />
+            <Route
+              exact
+              path="/consultpost/:id"
+              render={(props) => (
+                <Consultpost {...props} isLoggedIn={this.state.loggedIn} />
+              )}
+            />
             <Route exact path="/updatereq" component={Updatereq} />
             <Route component={Notfound} />
           </Switch>

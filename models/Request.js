@@ -17,23 +17,21 @@ const RequestSchema = new mongoose.Schema({
   },
   authorName: {
     type: String,
-    required: [true, 'Author name required!'],
+    require: [true, 'Please ass a authorName!'],
   },
+  answer: {
+    type: String,
+  },
+  password: {
+    type: String,
+    required: [true, 'Please ass a password'],
+  },
+
   content: {
     type: String,
     required: [true, 'Please add Content!'],
   },
-  phone: {
-    type: String,
-    required: [true, 'Please add phone number!'],
-  },
-  email: {
-    type: String,
-    required: [true, 'Please add email!'],
-  },
-  agreement: {
-    type: String,
-  },
+
   createdAt: {
     type: Date,
     default: Date.now,

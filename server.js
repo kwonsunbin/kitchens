@@ -7,7 +7,6 @@ const colors = require('colors');
 const errorHandler = require('./middleware/error');
 var bodyParser = require('body-parser');
 
-const multer = require('multer');
 var cookieParser = require('cookie-parser');
 
 const connectDB = require('./config/db');
@@ -22,19 +21,6 @@ const app = express();
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
-
-var storage = multer.diskStorage({
-  destination: function (req, file, cb) {
-    cb(null, './client/public/uploads/');
-  },
-  filename: function (req, file, cb) {
-    cb(null, Date.now() + file.originalname);
-  },
-});
-
-var upload = multer({ storage: storage });
-
-module.exports = upload;
 
 // Route files
 const requests = require('./routes/requests');

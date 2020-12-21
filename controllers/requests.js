@@ -27,7 +27,7 @@ exports.createRequest = asyncHandler(async (req, res, next) => {
   const request = await Request.create(req.body);
 
   if (!request) {
-    res.status(400).json({ success: false, data: '' });
+    res.status(400).json({ success: false });
   }
   res.status(201).json({
     succes: true,
@@ -52,7 +52,7 @@ exports.updateRequest = asyncHandler(async (req, res, next) => {
 });
 
 exports.deleteRequest = asyncHandler(async (req, res, next) => {
-  const request = await Post.findById(req.params.id);
+  const request = await Request.findById(req.params.id);
 
   if (!request) {
     return next(

@@ -22,13 +22,7 @@ const PhotoSchema = new mongoose.Schema({
     type: String,
     enum: ['가', '나', '다', '라', '마'],
   },
-
-  path: [{ type: String }],
-
-  img: {
-    data: Buffer,
-    contentType: String,
-  },
+  imgPaths: [{ type: String }],
   createdAt: {
     type: Date,
     default: Date.now,

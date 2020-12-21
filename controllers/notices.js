@@ -24,19 +24,51 @@ exports.getNotice = asyncHandler(async (req, res, next) => {
 });
 
 exports.createNotice = asyncHandler(async (req, res, next) => {
-  const notice = await Notice.create(req.body);
+  if (req.file) {
+    var obj = {
+      title: req.body.title,
+      content: req.body.content,
+      authorName: req.body.authorName,
+      imgPath: req.file.filename,
+    };
+  } else {
+    var obj = {
+      title: req.body.title,
+      content: req.body.content,
+      authorName: req.body.authorName,
+    };
+  }
 
-  res.status(201).json({
-    success: true,
-    data: notice,
+  Notice.create(obj, (err, item) => {
+    if (err) {
+      console.log(err);
+    } else {
+      res.redirect('/');
+    }
   });
 });
 
 exports.updateNotice = asyncHandler(async (req, res, next) => {
-  const notice = await Notice.findByIdAndUpdate(req.params.id, req.body, {
+  if (req.file) {
+    var obj = {
+      title: req.body.title,
+      content: req.body.content,
+      authorName: req.body.authorName,
+      imgPath: req.file.filename,
+    };
+  } else {
+    var obj = {
+      title: req.body.title,
+      content: req.body.content,
+      authorName: req.body.authorName,
+    };
+  }
+
+  const notice = await Notice.findByIdAndUpdate(req.params.id, obj, {
     new: true,
     runValidators: true,
   });
+
   if (!notice) {
     return next(
       new ErrorResponse(
