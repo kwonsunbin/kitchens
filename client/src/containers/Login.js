@@ -33,7 +33,7 @@ class Login extends Component {
       .then((res) => {
         console.log(res);
         swal('로그인 되었습니다');
-        window.location.replace('../manage');
+        window.location.replace('../');
       })
       .catch(function (error) {
         if (error.response) {

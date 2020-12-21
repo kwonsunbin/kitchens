@@ -21,6 +21,7 @@ const app = express();
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
+app.use(express.static(path.join(__dirname, './client/build')));
 
 // Route files
 const requests = require('./routes/requests');

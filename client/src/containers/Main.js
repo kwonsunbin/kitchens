@@ -102,13 +102,13 @@ class Main extends Component {
   }
   componentDidMount() {
     this.getCookie();
-    axios.get('/api/v1/events').then((res) => {
-      this.setState({
-        curdesc: res.data.data.desc,
-        curlink: res.data.data.eventPath,
-        curshow: res.data.data.show,
-      });
-    });
+    //axios.get('/api/v1/events').then((res) => {
+    //   this.setState({
+    //     curdesc: res.data.data.desc,
+    //     curlink: res.data.data.eventPath,
+    //     curshow: res.data.data.show,
+    //   });
+    // });
   }
   render() {
     return (
