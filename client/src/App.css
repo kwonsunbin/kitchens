@@ -1281,10 +1281,10 @@ ul {
 .consultbutton3 {
   border: 0.2vw solid white;
   color: white;
-  border-radius: 10%;
+  border-radius: 1%;
   background-color: black;
   opacity: 0.7;
-  font-size: 0.8vw;
+  font-size: 1vw;
   padding: 0.5vw;
   text-align: center;
 }

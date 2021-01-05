@@ -40,12 +40,13 @@ class Mainbox4 extends Component {
               </Paper>
             </Grid>
             <Grid container item xs={4}>
-              <Grid item xs={12}>
+              <Grid style={{ borderBottom: '0.02vh solid black' }} item xs={12}>
                 <h1>전화 상담</h1>
               </Grid>
               <Grid item xs={12}>
                 <h3>아래의 번호로 전화 주시면 친절히 상담해드리겠습니다.</h3>
-                <p> 010-4016-8890 / 053-766-0411 </p>
+                <h2> TEL : 053-766-0411 </h2>
+                <h2> H.P : 010-4016-8890 </h2>
               </Grid>
             </Grid>
             <Grid item xs={1}></Grid>
@@ -132,12 +133,17 @@ class Mainbox4 extends Component {
                 xs={12}
                 style={{ padding: '3vw', fontSize: '2.4vw' }}
               >
-                <Grid item xs={12}>
+                <Grid
+                  style={{ borderBottom: '0.02vh solid black' }}
+                  item
+                  xs={12}
+                >
                   <h2>전화 상담</h2>
                 </Grid>
                 <Grid item xs={12}>
                   <h4>아래의 번호로 전화 주시면 친절히 상담해드리겠습니다.</h4>
-                  <p> 010-4016-8890 / 053-766-0411 </p>
+                  <h3> TEL : 053-766-0411 </h3>
+                  <h3> H.P : 010-4016-8890 </h3>
                 </Grid>
               </Grid>
             </Grid>

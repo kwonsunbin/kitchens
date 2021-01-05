@@ -47,7 +47,7 @@ class Mainbox7 extends Component {
                         src={`../uploads/${example.imgPaths[0]}`}
                         alt="photos"
                         width="90%"
-                        height="90%"
+                        height="220vh"
                       ></img>
                     </Grid>
                     <Grid item xs={12} align="center">
@@ -86,7 +86,7 @@ class Mainbox7 extends Component {
                         src={`../uploads/${example.imgPaths[0]}`}
                         alt="photos"
                         width="90%"
-                        height="90%"
+                        height="220vh"
                       ></img>
                     </Grid>
                     <Grid item xs={12} align="center">

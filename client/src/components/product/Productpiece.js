@@ -15,7 +15,7 @@ class Productpiece extends Component {
                   src={`../uploads/${this.props.data.imgPaths[0]}`}
                   alt="hihi"
                   width="100%"
-                  height="300vw"
+                  height="400vw"
                   className="radius"
                 ></img>
               </Link>

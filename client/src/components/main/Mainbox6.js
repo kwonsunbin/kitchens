@@ -72,7 +72,7 @@ class Mainbox6 extends Component {
                   container
                 >
                   <Grid item xs={3} align="center" className="magni2">
-                    <Link to="./product1">
+                    <Link to="./product/1">
                       <h2>키친, 싱크대</h2>
                       <p>
                         <i className="fas fa-search-plus"></i>
@@ -93,7 +93,7 @@ class Mainbox6 extends Component {
                               src={`../uploads/${product.imgPaths[0]}`}
                               alt="photos"
                               width="100%"
-                              height="100%"
+                              height="220vh"
                               padding="0.2vw"
                             ></img>
 
@@ -117,7 +117,7 @@ class Mainbox6 extends Component {
                   }}
                 >
                   <Grid item xs={3} align="center" className="magni2">
-                    <Link to="./product2">
+                    <Link to="./product/2">
                       <h2>인테리어</h2>
                       <p>
                         <i className="fas fa-search-plus"></i>
@@ -138,7 +138,7 @@ class Mainbox6 extends Component {
                               src={`../uploads/${product.imgPaths[0]}`}
                               alt="photos"
                               width="100%"
-                              height="100%"
+                              height="220vh"
                             ></img>
 
                             <div className="babo">{product.title}</div>
@@ -160,7 +160,7 @@ class Mainbox6 extends Component {
                   container
                 >
                   <Grid item xs={3} align="center" className="magni2">
-                    <Link to="./product3">
+                    <Link to="./product/3">
                       <h2 className="m0">주문제작가구</h2>
                       <p>
                         <i className="fas fa-search-plus"></i>
@@ -181,7 +181,7 @@ class Mainbox6 extends Component {
                               src={`../uploads/${product.imgPaths[0]}`}
                               alt="photos"
                               width="100%"
-                              height="100%"
+                              height="220vh"
                             ></img>
 
                             <div className="babo">{product.title}</div>
@@ -229,7 +229,7 @@ class Mainbox6 extends Component {
               }}
             >
               <Grid item xs={3} align="center" className="magni2small">
-                <Link to="./product1">
+                <Link to="./product/1">
                   <h2>키친, 싱크대</h2>
                   <p>
                     <i className="fas fa-search-plus"></i>
@@ -250,7 +250,7 @@ class Mainbox6 extends Component {
                           src={`../uploads/${product.imgPaths[0]}`}
                           alt="photos"
                           width="100%"
-                          height="100%"
+                          height="220vh"
                           padding="0.2vw"
                         ></img>
 
@@ -271,7 +271,7 @@ class Mainbox6 extends Component {
               }}
             >
               <Grid item xs={3} align="center" className="magni2small">
-                <Link to="./product2">
+                <Link to="./product/2">
                   <h2>인테리어</h2>
                   <p>
                     <i className="fas fa-search-plus"></i>
@@ -292,7 +292,7 @@ class Mainbox6 extends Component {
                           src={`../uploads/${product.imgPaths[0]}`}
                           alt="photos"
                           width="100%"
-                          height="100%"
+                          height="220vh"
                         ></img>
 
                         <div className="babo">{product.title}</div>
@@ -313,7 +313,7 @@ class Mainbox6 extends Component {
               }}
             >
               <Grid item xs={3} align="center" className="magni2small">
-                <Link to="./product3">
+                <Link to="./product/3">
                   <h2 className="m0">주문제작가구</h2>
                   <p>
                     <i className="fas fa-search-plus"></i>
@@ -334,7 +334,7 @@ class Mainbox6 extends Component {
                           src={`../uploads/${product.imgPaths[0]}`}
                           alt="photos"
                           width="100%"
-                          height="100%"
+                          height="220vh"
                         ></img>
 
                         <div className="babo">{product.title}</div>

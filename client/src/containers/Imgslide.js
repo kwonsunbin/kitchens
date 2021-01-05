@@ -165,9 +165,23 @@ class Imgslide extends Component {
               item
               xs={12}
             >
+              <Grid item xs={1}>
+                <div
+                  className="consultbutton3"
+                  onClick={() => {
+                    window.history.back();
+                  }}
+                  style={{ cursor: 'default' }}
+                >
+                  되돌아가기
+                </div>
+              </Grid>
+              <Grid item xs={11}></Grid>
               <Grid item xs={6}>
                 <h1>{this.state.title}</h1>
-                <pre>{this.state.desc}</pre>
+                <pre style={{ color: 'white', fontSize: '1.2vw' }}>
+                  {this.state.desc}
+                </pre>
               </Grid>
               <Grid container item xs={6}>
                 {this.props.isLoggedIn ? (
@@ -254,6 +268,18 @@ class Imgslide extends Component {
         </Hidden>
         <Hidden mdUp>
           <Grid container alignItems="center">
+            <Grid item xs={1}>
+              <div
+                className="consultbutton3"
+                onClick={() => {
+                  window.history.back();
+                }}
+                style={{ cursor: 'default' }}
+              >
+                되돌아가기
+              </div>
+            </Grid>
+            <Grid item xs={11}></Grid>
             <Grid item xs={12}>
               &nbsp;
             </Grid>
